@@ -787,6 +787,7 @@
 		{
 			display: block;
 			text-decoration: none;
+			text-transform: lowercase;
 			font-size: 2.4em;
 			font-weight: 600;
 		}
