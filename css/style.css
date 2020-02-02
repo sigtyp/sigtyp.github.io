@@ -290,7 +290,7 @@
 			display: inline-block;
 			margin-top: 0.5em;
 			padding: 1em 1.5em;
-			background: #c61732;
+			background: #FF5555;
 			border-radius: 6px;
 			text-decoration: none;
 			text-transform: uppercase;
@@ -306,7 +306,7 @@
 
 			.button:hover
 			{
-				background: #ad142c;
+				background: #EE1C25;
 				color: #FFF !important;
 			}
 			
@@ -765,7 +765,7 @@
 		#header .container
 		{
 			position: relative;
-			padding: 3em 0em;
+			padding: 4em 0em;
 		}
 
 /*********************************************************************************/
@@ -828,7 +828,7 @@
 
 			#nav li.active a
 			{
-				background: #c61732;
+				background: #FF5555;
 				border-radius: 5px;
 				color: #FFF;
 			}
@@ -855,7 +855,7 @@
 
 		#banner .fa:before
 		{
-			padding-bottom: 0.50em;
+			padding-bottom: 0em;
 			font-size: 8em;
 		}
 
