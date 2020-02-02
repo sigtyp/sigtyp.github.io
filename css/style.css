@@ -963,7 +963,8 @@
 	#featured
 	{
 		position: relative;
-		background: url(images/featured-wrapper-bg.jpg) repeat;
+		background-color: #FF5555;
+		/*background: url(images/featured-wrapper-bg.jpg) repeat;*/
 		text-align: center;
 		color: #FFF;
 	}
