@@ -140,6 +140,7 @@ We expressly encourage people working in computational typology and multilingual
       </div>
       <div id="collapse1" class="panel-collapse collapse">
         <div class="panel-body">
+<p align="left" style="color:blue"> By Miryam de Lhoneux</p>
 <p  style="font-style:italic;" align="right">Summary by Miryam de Lhoneux, Uppsala University</p>
 <p>In her recent thesis, Miryam de Lhoneux studies neural dependency parsing for typologically diverse languages making use of treebanks from Universal Dependencies (UD) project. The high-level, overarching question she asks is how can linguistics inform neural NLP? At a time when NLP models are increasingly becoming inscrutable black boxes, it is not always obvious what the role of linguistics in NLP should be. Reviewing the literature, she identifies three approaches by which linguistic knowledge can be useful for neural NLP:
 Informing neural architecture design, analyzing what a model learns about language (think diagnostic classifiers), and engineering a multi-task learning architecture.
@@ -154,6 +155,8 @@ should learn similar information about AVCs to the information  it learns for fi
 
 Miryam finally investigates polyglot parsing where one model is trained on data from multiple languages. She considers a multi-task scenario where each language is a task; working in this framework, she asks the question of what model parameters should be shared. Training a polyglot model for related languages leads to substantial improvements in parsing accuracy over a monolingual baseline. This is true to a smaller extent when training a polyglot model for unrelated languages. Sharing parameters that partially abstract away from word order appears to be beneficial in both cases, but sharing parameters that represent words and characters is more beneficial for related than for unrelated languages. This makes linguistic sense but might also be a result of the use of BiLSTMs as a main block in the architecture. It seems intuitive that standard BiLSTMs are particularly good at learning word order patterns due to their sequential nature.
 </p>
+<p  style="font-style:italic;" align="right" color="red"><a href="https://www.researchgate.net/publication/336941175_Linguistically_Informed_Neural_Dependency_Parsing_for_Typologically_Diverse_Languages">Read the thesis on ResearchGate</a></p>
+
 </div>
       </div>
     </div>
