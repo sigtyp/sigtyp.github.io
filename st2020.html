@@ -86,6 +86,13 @@
 <p  style="font-size:17px">
 In 2020, <font color="red">S</font>IG<font color="red">T</font>YP  is offering <strong>a shared task on the prediction of typological features</strong>. The shared task features nearly 2,000 languages, with typological features taken from the World Atlas of Language Structures (<a href="https://wals.info/">WALS</a>).</p>
 
+<p  style="font-size:17px">
+To participate in the shared task, you will build a system that can predict typological properties of languages, given a handful of observed features. Training examples and development examples will be provided. All submitted systems will be compared on a held-out test set.</p>
+<p  style="font-size:17px">
+You will be invited to describe your system in a system paper for the SIGTYP workshop proceedings. The task organisers will write an overview paper that describes the task and summarises the different approaches taken, and their results.
+</p>
+
+<header><h2>Description</h2></header>
 <p style="font-size:17px">
 The typological features in WALS represent one approach to the categorization of the languages of the world according to their linguistic properties, e.g. in terms of their syntax, morphology, phonology inter alia. One example of such a typological feature is the basic word order feature. For instance, English is best described as a subject-object-verb (SVO) language whereas Japanese is best described as a subject-object-verb (SOV) language.
 </p>
@@ -93,13 +100,61 @@ The typological features in WALS represent one approach to the categorization of
 <p style="font-size:17px">
 One major issue with WALS, however, is that it is both sparse and skewed in terms of language--feature annotations. It is sparse in the sense that most languages only have annotations for a handful of features, and skewed in the sense that a few features have much wider coverage than others. Luckily, such features often correlate with one another, which allows for prediction of those features from others. For instance, languages where the verb precedes the object tend to have prepositions, e.g. Norwegian, whereas languages where the object precedes the verb word tend to have postpositions, e.g. Japanese.
 </p>
+
+
+
 <p style="font-size:17px">
 Although there is previous work dealing with versions of this task (Daumé III and Campbell 2017; Bjerva et al. 2019), important facts have been frequently ignored. Some papers to take care to control for genetic relationships between languages, e.g. not training and testing on Slavic languages, but little-to-no work has considered controlling for geographical proximity.
 </p>
+
+<header><h2>Subtasks</h2></header>
 <p style="font-size:17px">
-Details of the implementation of the shared task will be made available shortly. 
+The shared task will consist of <strong>three sub-tasks:</strong><br/>
+1) Holding out languages which share genetic relationships (e.g. training on non-Slavic languages, evaluating on Slavic languages);<br/>
+2) Holding out languages which have close geographic proximity (e.g. training on non-Balkan languages, evaluating on Balkan languages);<br/>
+3) A combination of the two above.<br/>
 </p>
-<header>
+
+<header><h2>Data Format</h2></header>
+
+<p style="font-size:17px"> The model will receive the language code and feature names as inputs and will be required to fill values for those requested features.</p>
+
+<p  style="font-size:17px">
+Input:
+</p>
+<p>
+mhi &nbsp;&nbsp;&nbsp;&nbsp;    Marathi   &nbsp;&nbsp;&nbsp;&nbsp;      order_of_subject,_object,_and_verb=? | number_of_genders=?<br/>
+jpn   &nbsp;&nbsp;&nbsp;&nbsp;  Japanese  &nbsp;&nbsp;&nbsp;&nbsp;   case_syncretism=? | order_of_adjective_and_noun=?<br/>
+</p>
+
+<p  style="font-size:17px">
+The expected output is:
+<p>
+mhi    &nbsp;&nbsp;&nbsp;&nbsp;    Marathi    &nbsp;&nbsp;&nbsp;&nbsp;         order_of_subject,_object,_and_verb= SOV | number_of_genders=three<br/>
+jpn    &nbsp;&nbsp;&nbsp;&nbsp;     Japanese     &nbsp;&nbsp;&nbsp;&nbsp;      case_syncretism=no_case_marking | order_of_adjective_and_noun=demonstrative-Noun<br/>
+</p>
+
+
+<header><h2>Data</h2></header>
+<p style="font-size:17px">
+The model will have access to typology features across a set of languages. These features are derived from the WALS database. For the purpose of this shared task, we will provide a subset of languages/features as shown below:
+</p>
+<p>
+tur   &nbsp;&nbsp;&nbsp;&nbsp;      Turkish   &nbsp;&nbsp;&nbsp;&nbsp;        case_syncretism=no_syncretism |  order_of_subject,_object,_and_verb= SOV | number_of_genders=none | definite_articles=no_definite_but_indefinite_article <br/>
+
+hin   &nbsp;&nbsp;&nbsp;&nbsp;     Hindi    &nbsp;&nbsp;&nbsp;&nbsp;      case_syncretism=core_and_non_core |  order_of_subject,_object,_and_verb= SOV | number_of_genders=two | definite_articles=no_definite_but_indefinite_article <br/>
+
+urd   &nbsp;&nbsp;&nbsp;&nbsp;    Urdu     &nbsp;&nbsp;&nbsp;&nbsp;          order_of_subject,_object,_and_verb= SOV | definite_articles=no_definite_but_indefinite_article <br/>
+
+jpn    &nbsp;&nbsp;&nbsp;&nbsp;   Japanese  &nbsp;&nbsp;&nbsp;&nbsp;      order_of_subject,_object,_and_verb= SOV | prefixing_vs_suffixing_in_inflectional_morphology=strongly_suffixing
+</p>
+<p style="font-size:17px">
+<strong><italic>Column 1:</strong></italic> Language ID <br/>
+<strong><italic>Column 2:</strong></italic> Language name <br/>
+<strong><italic>Column 3:</strong></italic> It contains the feature-value pairs for each language, where features are separated by ‘|’.
+</p>
+
+
 <div align="center">				<a href="st2020-reg.html" class="button medium">Register!</a></div>
 
 	
