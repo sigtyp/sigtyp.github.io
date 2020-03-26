@@ -96,8 +96,12 @@ You will be invited to describe your system in a system paper for the SIGTYP wor
 <header><h2 style="font-size:27px">Important Links</h2></header>
 <p style="font-size:17px">
 &nbsp;&nbsp;&#8611;&nbsp;&nbsp;<a href="https://github.com/sigtyp/ST2020/tree/master/data">Download Train and Dev data</a>!&nbsp;&nbsp;
-
 </p>
+<p style="font-size:17px">
+&nbsp;&nbsp;&#8611;&nbsp;&nbsp;<a href="st2020-reg.html">Register for the Task</a>!&nbsp;&nbsp;
+</p>
+
+
 
 <header><h2 style="font-size:27px">Important Dates</h2></header>
 <p style="font-size:17px">
@@ -132,21 +136,21 @@ The shared task will consist of <strong>two settings (subtasks):</strong><br/>
 
 <header><h2 style="font-size:27px">Data Format</h2></header>
 
-<p style="font-size:17px"> The model will receive the language code and feature names as inputs and will be required to fill values for those requested features.</p>
+<p style="font-size:17px"> The model will receive the language code, name, latitude, longitude, genus, family, country code, and feature names as inputs and will be required to fill values for those requested features.</p>
 
 <p  style="font-size:17px">
 Input:
 </p>
 <p>
-mhi &nbsp;&nbsp;&nbsp;&nbsp;    Marathi   &nbsp;&nbsp;&nbsp;&nbsp;      order_of_subject,_object,_and_verb=? | number_of_genders=?<br/>
-jpn   &nbsp;&nbsp;&nbsp;&nbsp;  Japanese  &nbsp;&nbsp;&nbsp;&nbsp;   case_syncretism=? | order_of_adjective_and_noun=?<br/>
+mhi &nbsp;&nbsp;&nbsp;&nbsp;    Marathi   &nbsp;&nbsp;&nbsp;&nbsp;  19.0   &nbsp;&nbsp;&nbsp;&nbsp; 76.0   &nbsp;&nbsp;&nbsp;&nbsp; Indic   &nbsp;&nbsp;&nbsp;&nbsp; Indo-European   &nbsp;&nbsp;&nbsp;&nbsp; IN	    &nbsp;&nbsp;&nbsp;&nbsp;    order_of_subject,_object,_and_verb=? | number_of_genders=?<br/>
+jpn   &nbsp;&nbsp;&nbsp;&nbsp;  Japanese  &nbsp;&nbsp;&nbsp;&nbsp; 	37.0 &nbsp;&nbsp;&nbsp;&nbsp;	140.0 &nbsp;&nbsp;&nbsp;&nbsp;	Japanese &nbsp;&nbsp;&nbsp;&nbsp;	Japanese &nbsp;&nbsp;&nbsp;&nbsp; JP	 &nbsp;&nbsp;&nbsp;&nbsp;  case_syncretism=? | order_of_adjective_and_noun=?<br/>
 </p>
 
 <p  style="font-size:17px">
 The expected output is:
 <p>
-mhi    &nbsp;&nbsp;&nbsp;&nbsp;    Marathi    &nbsp;&nbsp;&nbsp;&nbsp;         order_of_subject,_object,_and_verb= SOV | number_of_genders=three<br/>
-jpn    &nbsp;&nbsp;&nbsp;&nbsp;     Japanese     &nbsp;&nbsp;&nbsp;&nbsp;      case_syncretism=no_case_marking | order_of_adjective_and_noun=demonstrative-Noun<br/>
+mhi &nbsp;&nbsp;&nbsp;&nbsp;    Marathi   &nbsp;&nbsp;&nbsp;&nbsp;  19.0   &nbsp;&nbsp;&nbsp;&nbsp; 76.0   &nbsp;&nbsp;&nbsp;&nbsp; Indic   &nbsp;&nbsp;&nbsp;&nbsp; Indo-European   &nbsp;&nbsp;&nbsp;&nbsp; IN	    &nbsp;&nbsp;&nbsp;&nbsp;    order_of_subject,_object,_and_verb= SOV | number_of_genders=three<br/>
+jpn   &nbsp;&nbsp;&nbsp;&nbsp;  Japanese  &nbsp;&nbsp;&nbsp;&nbsp; 	37.0 &nbsp;&nbsp;&nbsp;&nbsp;	140.0 &nbsp;&nbsp;&nbsp;&nbsp;	Japanese &nbsp;&nbsp;&nbsp;&nbsp;	Japanese &nbsp;&nbsp;&nbsp;&nbsp; JP	 &nbsp;&nbsp;&nbsp;&nbsp;   case_syncretism=no_case_marking | order_of_adjective_and_noun=demonstrative-Noun<br/>
 </p>
 
 <header><h2 style="font-size:27px">Data</h2></header>
@@ -154,18 +158,19 @@ jpn    &nbsp;&nbsp;&nbsp;&nbsp;     Japanese     &nbsp;&nbsp;&nbsp;&nbsp;      c
 The model will have access to typology features across a set of languages. These features are derived from the WALS database. For the purpose of this shared task, we will provide a subset of languages/features as shown below:
 </p>
 <p>
-tur   &nbsp;&nbsp;&nbsp;&nbsp;      Turkish   &nbsp;&nbsp;&nbsp;&nbsp;        case_syncretism=no_syncretism |  order_of_subject,_object,_and_verb= SOV | number_of_genders=none | definite_articles=no_definite_but_indefinite_article <br/>
+tur   &nbsp;&nbsp;&nbsp;&nbsp;      Turkish   &nbsp;&nbsp;&nbsp;&nbsp;  39.0 &nbsp;&nbsp;&nbsp;&nbsp;  	35.0 &nbsp;&nbsp;&nbsp;&nbsp;  	Turkic &nbsp;&nbsp;&nbsp;&nbsp;  Altaic &nbsp;&nbsp;&nbsp;&nbsp;   TR &nbsp;&nbsp;&nbsp;&nbsp;  case_syncretism=no_syncretism |  order_of_subject,_object,_and_verb= SOV | number_of_genders=none | definite_articles=no_definite_but_indefinite_article <br/>
 
-hin   &nbsp;&nbsp;&nbsp;&nbsp;     Hindi    &nbsp;&nbsp;&nbsp;&nbsp;      case_syncretism=core_and_non_core |  order_of_subject,_object,_and_verb= SOV | number_of_genders=two | definite_articles=no_definite_but_indefinite_article <br/>
-
-urd   &nbsp;&nbsp;&nbsp;&nbsp;    Urdu     &nbsp;&nbsp;&nbsp;&nbsp;          order_of_subject,_object,_and_verb= SOV | definite_articles=no_definite_but_indefinite_article <br/>
-
-jpn    &nbsp;&nbsp;&nbsp;&nbsp;   Japanese  &nbsp;&nbsp;&nbsp;&nbsp;      order_of_subject,_object,_and_verb= SOV | prefixing_vs_suffixing_in_inflectional_morphology=strongly_suffixing
+jpn   &nbsp;&nbsp;&nbsp;&nbsp;  Japanese  &nbsp;&nbsp;&nbsp;&nbsp; 	37.0 &nbsp;&nbsp;&nbsp;&nbsp;	140.0 &nbsp;&nbsp;&nbsp;&nbsp;	Japanese &nbsp;&nbsp;&nbsp;&nbsp;	Japanese &nbsp;&nbsp;&nbsp;&nbsp; JP	 &nbsp;&nbsp;&nbsp;&nbsp;    order_of_subject,_object,_and_verb= SOV | prefixing_vs_suffixing_in_inflectional_morphology=strongly_suffixing
 </p>
 <p style="font-size:17px">
 <strong><italic>Column 1:</strong></italic> Language ID <br/>
 <strong><italic>Column 2:</strong></italic> Language name <br/>
-<strong><italic>Column 3:</strong></italic> It contains the feature-value pairs for each language, where features are separated by ‘|’.
+<strong><italic>Column 3:</strong></italic> Latitude <br/>
+<strong><italic>Column 4:</strong></italic> Longitude <br/>
+<strong><italic>Column 5:</strong></italic> Genus <br/>
+<strong><italic>Column 6:</strong></italic> Family <br/>
+<strong><italic>Column 7:</strong></italic> Country Codes <br/>
+<strong><italic>Column 8:</strong></italic> It contains the feature-value pairs for each language, where features are separated by ‘|’.
 </p>
 
 <header>
