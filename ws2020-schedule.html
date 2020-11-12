@@ -26,21 +26,16 @@
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-desktop.css" />
 		</noscript>
+
 		<script>
-		  embed = new SlidesLiveEmbed('presentation-embed-38939785', {
-			presentationId: '38939785',
+		  function showSL(id) {
+		  embed = new SlidesLiveEmbed('presentation-embed-'+id, {
+			presentationId: id,
 			autoPlay: false, // change to true to autoplay the embedded presentation
 			verticalEnabled: true
 		    });
-		</script>
-		<script>
-		  embed = new SlidesLiveEmbed('presentation-embed-38939790', {
-			presentationId: '38939790',
-			autoPlay: false, // change to true to autoplay the embedded presentation
-			verticalEnabled: true
-		    });
-		</script>
-	
+		}
+</script>
 
 		<!--Q/A display-->
 		<script>
@@ -214,7 +209,7 @@ Richard continues to maintain some "side-bar interests" including computational 
         </h4>
       </div>
       <div id="collapse3" class="panel-collapse collapse">
-        <div class="panel-body">
+        <div class="panel-body" onshow="showSL('38939785')">
 <p>
 <img src="workshops/2020/keynotes/miriam_butt.jpeg" alt="Miriam Butt" style="height:110px;float:left;margin:9px"/>
 Miriam Butt is Professor of Linguistics at the Department of Linguistics at the University of Konstanz.
@@ -224,6 +219,7 @@ Miriam Butt is Professor of Linguistics at the Department of Linguistics at the 
 <!-- SlidesLive -->
 <div id="presentation-embed-38939785" class="container container-sm"></div>
 
+	
 
 </p>
 
@@ -267,6 +263,13 @@ Typological knowledge bases (KBs) such as WALS  (Dryer and Haspelmath, 2013) con
 <br/>
 <!-- SlidesLive -->
 <div id="presentation-embed-38939790" class="container container-sm"></div>
+<script>
+  embed = new SlidesLiveEmbed('presentation-embed-38939790', {
+        presentationId: '38939790',
+        autoPlay: false, // change to true to autoplay the embedded presentation
+        verticalEnabled: true
+    });
+</script>
 
 </p>
 <p  style="font-style:italic;" align="right" color="red"><a href="https://">Slideslive Talk/TBA</a>&nbsp;&nbsp;&nbsp;<a href="https://">RocketChat/TBA</a>&nbsp;&nbsp;&nbsp;<a href="workshops/2020/papers/19.pdf">Paper PDF</a></p>
