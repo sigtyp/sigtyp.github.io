@@ -18,6 +18,7 @@
   		<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script-->
   		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		<script src="js/skel.min.js"></script>
+		<script src="https://slideslive.com/embed_presentation.js"></script>
 		<script src="js/skel-panels.min.js"></script>
 		<script src="js/init.js"></script>
 		<noscript>
@@ -25,6 +26,30 @@
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-desktop.css" />
 		</noscript>
+
+		<!--Q/A display-->
+		<script>
+		  function resizeIframe(obj) {
+	    		obj.style.height = obj.contentWindow.document.documentElement.scrollHeight  + 'px';
+			obj.style.height = '500px';
+  			}
+		</script>
+		<style>
+			.forumlink {
+			border-width:2pt;
+			margin:auto; display:table;
+			font-size: 14pt;
+			background:#eaeaea;
+			color:#000050;
+			text-align:center; border:1px solid #0060e0; padding:4px 15px 4px 15px
+			}
+			.forumlink:hover {
+			background:#a0a0ff; color:white; 
+			}
+</style>
+
+
+
 	</head>
 	<body>
 
@@ -180,8 +205,20 @@ Richard continues to maintain some "side-bar interests" including computational 
 Miriam Butt is Professor of Linguistics at the Department of Linguistics at the University of Konstanz.
 
  Currently, Miriam is concentrating on the history and distribution of case and complex predicates in South Asian languages. She is also interested in issues of grammar architecture and investigate interface issues (syntax-semantics, morphology-syntax/semantics, prosody-syntax) from both a theoretical and a computational perspective. 
+<br/>
+<!-- SlidesLive -->
+<div id="presentation-embed-38939785" class="container container-sm"></div>
+<script>
+  embed = new SlidesLiveEmbed('presentation-embed-38939785', {
+        presentationId: '38939785',
+        autoPlay: false, // change to true to autoplay the embedded presentation
+        verticalEnabled: true
+    });
+</script>
 	
+
 </p>
+
 <p  style="font-style:italic;" align="right" color="red"><a href="https://">Slideslive Talk/TBA</a>&nbsp;&nbsp;&nbsp;<a href="https://">RocketChat/TBA</a>&nbsp;&nbsp;&nbsp;<a href="https://www.ling.uni-konstanz.de/butt/miriam-butt/">Miriam's Webpage </a></p>
        </div>
       </div>
@@ -569,6 +606,10 @@ Recent work has shown that a single multilingual model with typologically inform
 </p>
 <p  style="font-style:italic;" align="right" color="red"><a href="https://">Slideslive Talk/TBA</a>&nbsp;&nbsp;&nbsp;<a href="https://">RocketChat/TBA</a>&nbsp;&nbsp;&nbsp;<a href="workshops/2020/papers/6.pdf">Paper PDF</a></p>
 
+<div  class="forumlink"
+onclick="window.open('http://bb.ivri.webfactional.com/forumdisplay.php?fid=4','new_window');"> open forum page and ask your question</A></div>
+<iframe src="http://bb.ivri.webfactional.com/archive/index.php?forum-4.html" title="QA -- Multilinguality" width=100% frameborder="0" scrolling="no" onload="resizeIframe(this)" style="border-width:0"></iframe>
+<!--height=400 width=100% -->
        </div>
       </div>
     </div>
@@ -585,7 +626,7 @@ Recent work has shown that a single multilingual model with typologically inform
         <div class="panel-body">
 <p align="left" style="color:blue"> By Isabel Papadimitriou, Ethan A. Chi, Richard Futrell and Kyle Mahowald</p>
 <p>
-We investigate how Multilingual BERT (mBERT) encodes grammar by examining how the high-order grammatical feature of morphosyntactic alignment (how different languages define what counts as a "subject") is manifested across the embedding spaces of different languages. To understand if and how morphosyntactic alignment affects contextual embedding spaces, we train classifiers to recover the subjecthood of mBERT embeddings in transitive sentences (which do not contain overt information about morphosyntactic alignment) and then evaluate them zero-shot on intransitive sentences (where subjecthood classification depends on alignment), within and across languages. We find that the resulting classifier distributions reflect the morphosyntactic alignment of their training languages. Our results demonstrate that mBERT representations are influenced by high-level grammatical features that are not manifested in any one input sentence, and that this is robust across languages. Further examining the characteristics that our classifiers rely on, we find that features such as passive voice, animacy and case strongly correlate with classification decisions, suggesting that mBERT does not encode a purely syntactic subjecthood, but a continuous subjecthood as is proposed in much of the functional linguistics literature. Together, these results provide insight into how grammatical features manifest in contextual embedding spaces, at a level of abstraction not covered by previous work.
+We investigate how Multilingual BERT (mBERT) encodes grammar by examining how the high-order grammatical feature of morphosyntactic alignment (how different languages define what counts as a "subject") is manifested across the embedding spaces of different languages. To understand if and how morphosyntactic alignment affects contextual embedding spaces, we train classifiers to recover the subjecthood of mBERT embeddings in transitive sentences (which do not contain overt information about morphosyntactic alignment) and thehn evaluate them zero-shot on intransitive sentences (where subjecthood classification depends on alignment), within and across languages. We find that the resulting classifier distributions reflect the morphosyntactic alignment of their training languages. Our results demonstrate that mBERT representations are influenced by high-level grammatical features that are not manifested in any one input sentence, and that this is robust across languages. Further examining the characteristics that our classifiers rely on, we find that features such as passive voice, animacy and case strongly correlate with classification decisions, suggesting that mBERT does not encode a purely syntactic subjecthood, but a continuous subjecthood as is proposed in much of the functional linguistics literature. Together, these results provide insight into how grammatical features manifest in contextual embedding spaces, at a level of abstraction not covered by previous work.
 </p>
 <p  style="font-style:italic;" align="right" color="red"><a href="https://">Slideslive Talk/TBA</a>&nbsp;&nbsp;&nbsp;<a href="https://">RocketChat/TBA</a>&nbsp;&nbsp;&nbsp;<a href="workshops/2020/papers/10.pdf">Paper PDF</a></p>
 
