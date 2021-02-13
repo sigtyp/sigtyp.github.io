@@ -310,12 +310,12 @@ Cross-lingual transfer is a leading technique for parsing low-resource languages
 <p>
 This year, SIGTYP is hosting a <strong>shared task on predicting language IDs from speech</strong>. While language ID is a fundamental speech and language processing task, it remains a challenging task in many conditions, especially when expanding the set of languages past evaluation has focused on. Further, for many low-resource and endangered languages, only single-speaker recordings may be available, demanding a need for domain and speaker-invariant language ID systems.<br/><br/>
 We selected 16 languages from across the world, some of which share phonological features, and others where these have been lost or gained due to language contact, to perform what we call robust language ID: systems will be trained on largely single-speaker speech from one domain, but evaluated on data in other domains recorded from speakers under different recording circumstances, mimicking more realistic low-resource scenarios.<br/><br/>
-For training models, we provide participants with speech data from the <a href="https://github.com/festvox/datasets-CMU_Wilderness">CMU Wilderness Dataset</a>, which contains read speech from the Bible in 699 languages, but usually recorded from a single speaker. This training data is released in the form of derived MFCCs---please contact the organizers if you want to use the full raw audio or another representation instead.<br/><br/>
+For training models, we provide participants with speech data from the <a href="https://github.com/festvox/datasets-CMU_Wilderness">CMU Wilderness Dataset</a>, which contains read speech from the Bible in 699 languages, but usually recorded from a single speaker. This training data is released in the form of derived MFCCs---please contact the organizers if you want to use another representation instead.<br/><br/>
 The evaluation will be conducted on data from different sources, in particular data from the <a href="https://commonvoice.mozilla.org/">Common Voice</a> project, several OpenSLR corpora (<a href="http://openslr.org/24/">SLR24</a>, <a href="http://openslr.org/35/">SLR35</a>, <a href="http://openslr.org/36/">SLR36</a>, <a href="http://openslr.org/64/">SLR64</a>, <a href="http://openslr.org/66/">SLR66</a>, <a href="http://openslr.org/79/">SLR79</a>), and the <a href="https://www.paradisec.org.au/">Paradisec</a> collection, testing systems’ capacity to generalize to new domains, new speakers, and new recording settings. We will also use these data sources to give participants validation data in all 16 languages to test their systems.<br/><br/>
 Please see the README in our data release for the specific languages and exact data size.<br/><br/>
 Participants will be invited to describe their system in a paper for the SIGTYP workshop proceedings. The task organizers will write an overview paper that describes the task and summarizes the different approaches taken, and analyzes their results.<br/><br/>
 Important Links:
-  Download the data: <a href="https://drive.google.com/drive/folders/1iC7cPzXTIc2YEzwOopVVHT6x5nEoCags?usp=sharing">Google Drive</a> or <a href="https://livejohnshopkins-my.sharepoint.com/:f:/g/personal/esalesk1_jh_edu/El9fnVK7A9BJkiAxi8iuZoQBfUi8jcAj28m0rcTmkMj2Rw?e=bnWHaP">OneDrive</a><br/>
+  Download the data: <a href="https://drive.google.com/drive/folders/14zl2picVrNwcylXNA0cOb3ZAyF06rPMf?usp=sharing">Google Drive</a> or <a href="https://livejohnshopkins-my.sharepoint.com/:f:/g/personal/esalesk1_jh_edu/El9fnVK7A9BJkiAxi8iuZoQBfUi8jcAj28m0rcTmkMj2Rw?e=bXngzb">OneDrive</a><br/>
   Register for the task: <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNjICHaeo06aZtFZ0b5W0OSG2-mLxkmOR_8PPaoXerG79PbA/viewform?usp=sf_link">Registration Form</a><br/>
   Additional details on submission: <a href="https://sigtyp.github.io/st2021.html">Shared Task site</a><br/>
 <br/>
@@ -336,6 +336,37 @@ Elena Klyachko, Oleg Serikov, Ritesh Kumar, Ryan Cotterell, Ekaterina Vylomova
        </div>
       </div>
     </div>
+
+  <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse81">[Dialog-21] Low-resource Speech Evaluation</a>
+        </h4>
+      </div>
+      <div id="collapse81" class="panel-collapse collapse">
+        <div class="panel-body">
+<p>
+The participants can use the <a href="https://lowresource-lang-eval.github.io/content/data/index_data_asr.html">Lingvodoc project data</a> provided by the organizers as well as any other available data. The source code of the solutions as well as the data used must be published. All files are UTF-8 (without BOM) encoded Every participant can make up to 3 submissions.<br/><br/>
+Subtasks:<br/>
+1. Language detection. The participants will detect the language, the genus and the family for an utterance. All genera and families will be specified in the training data. However, the test data will also have surprise languages. The participants should specify X for the surprise language utterances. The data can have repetitions as well as Russian stimuli pronounced within the utterances. We suppose that the language detection task has already been accomplished in “cleaner” conditions so it would be useful to see how the solutions will perform on “field” data.<br/>
+2. Speech recognition. The participants will transcribe utterances or spell them. A test dataset without repetitions will be provided. However we consider repetitions in utterances as a challenge for the participants as it well help work with common field data.<br/>
+3. Automatic detection of Russian stimuli.<br/>
+<br/>
+Important Dates:<br/>
+01.02 — training data release<br/>
+21.02 — test data release<br/>
+06.03 — submissions due<br/>
+12.03 — results published<br/>
+20.03 — papers due<br/>
+<br/>
+Organizers: Oleg Serikov, Elena Klyachko
+
+</p>
+<p  style="font-style:italic;" align="right" color="red"><a href="https://lowresource-lang-eval.github.io/content/shared_tasks/asr2021_en.html">https://lowresource-lang-eval.github.io/content/shared_tasks/asr2021_en.html</a></p>
+       </div>
+      </div>
+    </div>
+
 
 
 
