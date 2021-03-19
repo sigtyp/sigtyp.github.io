@@ -20,6 +20,15 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-panels.min.js"></script>
 		<script src="js/init.js"></script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-RYHH2HELQN"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-RYHH2HELQN');
+		</script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -138,33 +147,64 @@ Code: <a href="https://github.com/cindyxinyiwang/multiview-subword-regularizatio
     </div>
 
 
+
+
+	
+<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse71">[EACL 2021] Bootstrapping Multilingual AMR with Contextual Word Alignments</a>
+        </h4>
+      </div>
+      <div id="collapse71" class="panel-collapse collapse">
+        <div class="panel-body">
+<p align="left" style="color:blue"> By Janaki Sheth, Young-Suk Lee, Ramon Fernandez Astudillo, Tahira Naseem, Radu Florian, Salim Roukos, and Todd Ward</p>
+
+<p  style="font-style:italic;" align="right">Summary Janaki Sheth</p>
+<p>
+Abstract Meaning Representation (AMR) is a popular formalism of natural language that  represents the meaning of a sentence as a semantic graph. It uses an inventory of concepts and captures “who-is-doing-what-to-whom" in a propositional style logic, abstracting away  from syntactical variation. 
+<br/><br/>
+Additionally, since AMR is agnostic about how to derive meanings from text it lends itself  very well to the encoding of semantics across languages. In fact work by Damonte, Cohen in  2018 showed that it may be possible to use the original AMR annotations devised for  English as representation for equivalent sentences in other languages without any  modification despite translation divergence. However, developing an AMR parser for non English languages has been difficult because the existing annotated training resources that  are sufficiently large are available in English only. Furthermore, acquiring semantic  annotations for a large number of sentences is well-known to be a slow and expensive  process in NLP.  
+<br/><br/>
+In our work we address these concerns by exploiting transformer-based multilingual word  embeddings in particular those from XLM-RoBERTa. Besides using these contextual word  embeddings as input token representations, we leverage them for annotation projection,  where existing AMR annotations for English are projected to a target language by using  contextual word alignments. 
+<br/><br/> 
+We also combine different techniques for text-to-concept alignments and for AMR parser  training which significantly improve performance over our base models. For concept  alignment, we combine our proposed annotation projection method with previously  established alignment techniques utilizing matching rules tailored to AMR as well as  machine translation aligners (Flanigan et al., 2014; Pourdamghani et al., 2014). For AMR  parser training, we pre-train an AMR parser on the treebanks of different languages  simultaneously and subsequently finetune on each language. 
+<br/><br/>
+We show that our proposed approaches not only achieve a highly competitive performance for German, Spanish, Italian and Chinese but are also easily scalable via zero-shot learning to  the 100 languages included in the training set of the XLM-R multilingual transformer.
+
+</p>
+<p  style="font-style:italic;" align="right" color="red"><a href="https://arxiv.org/abs/2102.02189" target="_blank">https://arxiv.org/abs/2102.02189</a></p>
+       </div>
+      </div>
+    </div>
+	
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">[EACL 2021] Multilingual and Cross-lingual Document Classification: A Meta-Learning Approach</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">[EACL 2021] Combining Deep Generative Models and Multi-lingual Pretraining for Semi-supervised Document Classification</a>
         </h4>
       </div>
-      <div id="collapse3" class="panel-collapse collapse">
+      <div id="collapse5" class="panel-collapse collapse">
         <div class="panel-body">
-<p align="left" style="color:blue"> By Niels van der Heijden, Helen Yannakoudakis, Pushkar Mishra, and Ekaterina Shutova</p>
+<p align="left" style="color:blue"> By Yi Zhu, Ehsan Shareghi, Yingzhen Li, Roi Reichart, and Anna Korhonen</p>
 
-<p  style="font-style:italic;" align="right">Summary by Niels van der Heijden</p>
+<p  style="font-style:italic;" align="right">Summary by Yi Zhu</p>
 <p>
-With the rise of large multilingual language models, cross-lingual transfer learning methods have achieved great performance gains. Yet, these methods either do not close the performance gap with a monolingual classifier in the target language or are impractically computationally expensive. We investigate meta-learning as a solution for cross-lingual document classification in previously unseen languages as well as a multilingual joint training setting with a limited set of labeled data available.
-<br/><br/>
-We conduct a systematic comparison of optimization- and metric-based meta-learning methods and investigate a wide array of settings in terms of the number of documents available per language during training, as well as the number of available languages. We compare these methods against strong baselines based on standard supervised learning and show that meta-learning thrives when the task distribution is heterogeneous.
-<br/><br/>
-We introduce a simple, yet effective modification to existing meta-learning methods which allows for better and more stable learning. Our method, ProtoMAMLn, performs above or on-par with state-of-the-art methods while requiring up to 100 times less computing power in terms of GPU
-hours.
+Deep generative models (DGMs) such as variational autoencoder (VAE) are capable of capturing complex data distributions at scale with rich latent representations.  Instead of mapping the input x into a fixed vector z, VAE generates a distribution for the latent representation q(z | x), and randomly samples z̃ from the distribution to reconstruct x, so that any z ~ q(z | x), even not seen during training, could potentially be the latent representation of x. Semi-supervised learning with deep generative models (SDGMs) offers a framework for leveraging large amount of unlabelled data to learn better label-aware latent representations guided by little labelled data.Extending VAE which only models x and z, SDGMs also include the label y into consideration, and thus have the ability to learn directly from semi-supervised data.
+<br/><br/> 
+Multi-lingual pretraining is another line of research shown to effectively use unlabelled data through learning shared representations across languages that can be transferred to downstream tasks. Nonetheless, the lack of labelled data still leads to inferior performance of the same model compared to those trained in languages with more labelled data such as English.
+ <br/><br/>
+In this work, we bridge the gap to form a pipeline framework by combining SDGMs and multi-lingual pretraining for multi-lingual document classification. The pretrained model serves as multi-lingual encoder, and SDGMs can operate on top of it independently of encoding architecture. To highlight such independence, we experiment with two pretraining settings: (1) our LSTM-based cross-lingual VAE, and (2) the multi-lingual BERT (mBERT). 
+ <br/><br/>
+Experiments on document classification in several languages show that our semi-supervised framework with different encoders outperforms strong (semi-)supervised baselines including supervised mBERT, verifying that the benefits of SDGMs are orthogonal to the encoding architecture or pretraining procedure. It opens up a new avenue for SDGMs in low-resource NLP by incorporating unlabelled data potentially from different domains and languages. Our preliminary results in cross-lingual zero-shot setting are also promising, and we will continue the exploration in this direction as future work.
 </p>
-<p  style="font-style:italic;" align="right" color="red"><a href=" https://arxiv.org/abs/2101.11302" target="_blank"> https://arxiv.org/abs/2101.11302</a></p>
+<p  style="font-style:italic;" align="right" color="red"><a href="https://arxiv.org/abs/2101.10717" target="_blank">https://arxiv.org/abs/2101.10717</a></p>
 
        </div>
       </div>
     </div>
 
-
-    <div class="panel panel-default">
+	    <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
           <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">[EACL 2021] Cross-lingual Entity Alignment with Incidental Supervision</a>
@@ -197,33 +237,28 @@ Experiments on two benchmark datasets indicate the effectiveness of the incident
        </div>
       </div>
     </div>
-
-
-    <div class="panel panel-default">
+	
+	
+	
+<div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">[EACL 2021] Combining Deep Generative Models and Multi-lingual Pretraining for Semi-supervised Document Classification</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">[EACL 2021] Cross-lingual Visual Pre-training for Multimodal Machine Translation</a>
         </h4>
       </div>
-      <div id="collapse5" class="panel-collapse collapse">
+      <div id="collapse7" class="panel-collapse collapse">
         <div class="panel-body">
-<p align="left" style="color:blue"> By Yi Zhu, Ehsan Shareghi, Yingzhen Li, Roi Reichart, and Anna Korhonen</p>
+<p align="left" style="color:blue"> By Ozan Caglayan, Menekse Kuyu, Mustafa Sercan Amac, Pranava Madhyastha, Erkut Erdem, Aykut Erdem, and Lucia Specia</p>
 
-<p  style="font-style:italic;" align="right">Summary by Yi Zhu</p>
+<p  style="font-style:italic;" align="right">Summary by Ozan Caglayan</p>
 <p>
-Deep generative models (DGMs) such as variational autoencoder (VAE) are capable of capturing complex data distributions at scale with rich latent representations.  Instead of mapping the input x into a fixed vector z, VAE generates a distribution for the latent representation q(z | x), and randomly samples z̃ from the distribution to reconstruct x, so that any z ~ q(z | x), even not seen during training, could potentially be the latent representation of x. Semi-supervised learning with deep generative models (SDGMs) offers a framework for leveraging large amount of unlabelled data to learn better label-aware latent representations guided by little labelled data.Extending VAE which only models x and z, SDGMs also include the label y into consideration, and thus have the ability to learn directly from semi-supervised data.
-<br/><br/> 
-Multi-lingual pretraining is another line of research shown to effectively use unlabelled data through learning shared representations across languages that can be transferred to downstream tasks. Nonetheless, the lack of labelled data still leads to inferior performance of the same model compared to those trained in languages with more labelled data such as English.
- <br/><br/>
-In this work, we bridge the gap to form a pipeline framework by combining SDGMs and multi-lingual pretraining for multi-lingual document classification. The pretrained model serves as multi-lingual encoder, and SDGMs can operate on top of it independently of encoding architecture. To highlight such independence, we experiment with two pretraining settings: (1) our LSTM-based cross-lingual VAE, and (2) the multi-lingual BERT (mBERT). 
- <br/><br/>
-Experiments on document classification in several languages show that our semi-supervised framework with different encoders outperforms strong (semi-)supervised baselines including supervised mBERT, verifying that the benefits of SDGMs are orthogonal to the encoding architecture or pretraining procedure. It opens up a new avenue for SDGMs in low-resource NLP by incorporating unlabelled data potentially from different domains and languages. Our preliminary results in cross-lingual zero-shot setting are also promising, and we will continue the exploration in this direction as future work.
-</p>
-<p  style="font-style:italic;" align="right" color="red"><a href="https://arxiv.org/abs/2101.10717" target="_blank">https://arxiv.org/abs/2101.10717</a></p>
-
+Pre-trained language models have been shown to improve performance in many natural language tasks substantially. Although the early focus of such models was single language pre-training, recent advances have resulted in cross-lingual and visual pre-training methods. In this paper, we combine these two approaches to learn visually-grounded cross-lingual representations. Specifically, we extend the translation language modelling by Lample  and  Conneau (2019) with masked region classification and perform pre-training with three-way parallel vision and language corpora. We show that when fine-tuned for multimodal machine translation, these models obtain state-of-the-art performance. We also provide qualitative insights into the usefulness of the learned grounded representations. Our data, code and models will be publicly available at the project website: <a href="https://hucvl.github.io/VTLM">https://hucvl.github.io/VTLM</a></p>
+<p  style="font-style:italic;" align="right" color="red"><a href="https://arxiv.org/abs/2101.10044" target="_blank">https://arxiv.org/abs/2101.10044</a></p>
        </div>
       </div>
     </div>
+
+
 
  <div class="panel panel-default">
       <div class="panel-heading">
@@ -248,74 +283,33 @@ Although this work's primary merit is a practical contribution to the field of n
       </div>
     </div>
 
-<div class="panel panel-default">
+	    <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">[EACL 2021] Summarising Historical Text in Modern Languages</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">[EACL 2021] Multilingual and Cross-lingual Document Classification: A Meta-Learning Approach</a>
         </h4>
       </div>
-      <div id="collapse6" class="panel-collapse collapse">
+      <div id="collapse3" class="panel-collapse collapse">
         <div class="panel-body">
-<p align="left" style="color:blue"> By Xutan Peng, Yi Zheng, Chenghua Lin, Advaith Siddharthan</p>
+<p align="left" style="color:blue"> By Niels van der Heijden, Helen Yannakoudakis, Pushkar Mishra, and Ekaterina Shutova</p>
 
-<p  style="font-style:italic;" align="right">Summary by Xutan Peng</p>
+<p  style="font-style:italic;" align="right">Summary by Niels van der Heijden</p>
 <p>
-Summarising historical text is a fundamentally important routine to historians, as it can help people collect, organize, and share knowledge. Due to cultural and linguistic changes, this task is challenging even for experts, let alone being automated. In this paper, we introduce the task of summarising documents in historical forms of a language in the corresponding modern language to the NLP community. With the help of eight linguistic experts, we compile a gold-standard text summarisation dataset, which consists of historical German (sampled from the GerManC Corpus, 1600s - 1800s) and Chinese (sampled from the Wanli Gazette, 1500s - 1600s) news summarised in modern German or Chinese. Based on cross-lingual transfer learning techniques, we propose a summarisation model that can be trained even with no cross-lingual (historical to modern) parallel data, and further benchmark it against state-of-the-art algorithms. We report automatic and human evaluations that distinguish the historical to modern language summarisation task from standard cross-lingual summarisation (i.e., modern to modern language), highlight the distinctness and value of our dataset, and demonstrate that our transfer learning approach outperforms standard Transformer-based cross-lingual benchmarks on this task. We release our code and data at <a href="https://github.com/Pzoom522/HistSumm">https://github.com/Pzoom522/HistSumm</a>.
+With the rise of large multilingual language models, cross-lingual transfer learning methods have achieved great performance gains. Yet, these methods either do not close the performance gap with a monolingual classifier in the target language or are impractically computationally expensive. We investigate meta-learning as a solution for cross-lingual document classification in previously unseen languages as well as a multilingual joint training setting with a limited set of labeled data available.
+<br/><br/>
+We conduct a systematic comparison of optimization- and metric-based meta-learning methods and investigate a wide array of settings in terms of the number of documents available per language during training, as well as the number of available languages. We compare these methods against strong baselines based on standard supervised learning and show that meta-learning thrives when the task distribution is heterogeneous.
+<br/><br/>
+We introduce a simple, yet effective modification to existing meta-learning methods which allows for better and more stable learning. Our method, ProtoMAMLn, performs above or on-par with state-of-the-art methods while requiring up to 100 times less computing power in terms of GPU
+hours.
 </p>
-<p  style="font-style:italic;" align="right" color="red"><a href="https://arxiv.org/abs/2101.10759" target="_blank">https://arxiv.org/abs/2101.10759</a></p>
+<p  style="font-style:italic;" align="right" color="red"><a href=" https://arxiv.org/abs/2101.11302" target="_blank"> https://arxiv.org/abs/2101.11302</a></p>
+
        </div>
       </div>
     </div>
-
-
-<div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">[EACL 2021] Cross-lingual Visual Pre-training for Multimodal Machine Translation</a>
-        </h4>
-      </div>
-      <div id="collapse7" class="panel-collapse collapse">
-        <div class="panel-body">
-<p align="left" style="color:blue"> By Ozan Caglayan, Menekse Kuyu, Mustafa Sercan Amac, Pranava Madhyastha, Erkut Erdem, Aykut Erdem, and Lucia Specia</p>
-
-<p  style="font-style:italic;" align="right">Summary by Ozan Caglayan</p>
-<p>
-Pre-trained language models have been shown to improve performance in many natural language tasks substantially. Although the early focus of such models was single language pre-training, recent advances have resulted in cross-lingual and visual pre-training methods. In this paper, we combine these two approaches to learn visually-grounded cross-lingual representations. Specifically, we extend the translation language modelling by Lample  and  Conneau (2019) with masked region classification and perform pre-training with three-way parallel vision and language corpora. We show that when fine-tuned for multimodal machine translation, these models obtain state-of-the-art performance. We also provide qualitative insights into the usefulness of the learned grounded representations. Our data, code and models will be publicly available at the project website: <a href="https://hucvl.github.io/VTLM">https://hucvl.github.io/VTLM</a></p>
-<p  style="font-style:italic;" align="right" color="red"><a href="https://arxiv.org/abs/2101.10044" target="_blank">https://arxiv.org/abs/2101.10044</a></p>
-       </div>
-      </div>
-    </div>
-
-
-<div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse71">[EACL 2021] Bootstrapping Multilingual AMR with Contextual Word Alignments</a>
-        </h4>
-      </div>
-      <div id="collapse71" class="panel-collapse collapse">
-        <div class="panel-body">
-<p align="left" style="color:blue"> By Janaki Sheth, Young-Suk Lee, Ramon Fernandez Astudillo, Tahira Naseem, Radu Florian, Salim Roukos, and Todd Ward</p>
-
-<p  style="font-style:italic;" align="right">Summary Janaki Sheth</p>
-<p>
-Abstract Meaning Representation (AMR) is a popular formalism of natural language that  represents the meaning of a sentence as a semantic graph. It uses an inventory of concepts and captures “who-is-doing-what-to-whom" in a propositional style logic, abstracting away  from syntactical variation. 
-<br/><br/>
-Additionally, since AMR is agnostic about how to derive meanings from text it lends itself  very well to the encoding of semantics across languages. In fact work by Damonte, Cohen in  2018 showed that it may be possible to use the original AMR annotations devised for  English as representation for equivalent sentences in other languages without any  modification despite translation divergence. However, developing an AMR parser for non English languages has been difficult because the existing annotated training resources that  are sufficiently large are available in English only. Furthermore, acquiring semantic  annotations for a large number of sentences is well-known to be a slow and expensive  process in NLP.  
-<br/><br/>
-In our work we address these concerns by exploiting transformer-based multilingual word  embeddings in particular those from XLM-RoBERTa. Besides using these contextual word  embeddings as input token representations, we leverage them for annotation projection,  where existing AMR annotations for English are projected to a target language by using  contextual word alignments. 
-<br/><br/> 
-We also combine different techniques for text-to-concept alignments and for AMR parser  training which significantly improve performance over our base models. For concept  alignment, we combine our proposed annotation projection method with previously  established alignment techniques utilizing matching rules tailored to AMR as well as  machine translation aligners (Flanigan et al., 2014; Pourdamghani et al., 2014). For AMR  parser training, we pre-train an AMR parser on the treebanks of different languages  simultaneously and subsequently finetune on each language. 
-<br/><br/>
-We show that our proposed approaches not only achieve a highly competitive performance for German, Spanish, Italian and Chinese but are also easily scalable via zero-shot learning to  the 100 languages included in the training set of the XLM-R multilingual transformer.
-
-</p>
-<p  style="font-style:italic;" align="right" color="red"><a href="https://arxiv.org/abs/2102.02189" target="_blank">https://arxiv.org/abs/2102.02189</a></p>
-       </div>
-      </div>
-    </div>
-
-<div class="panel panel-default">
+	
+	
+	<div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
           <a data-toggle="collapse" data-parent="#accordion" href="#collapse72">[EACL 2021] Project-then-Transfer: Effective Two-stage Cross-lingual Transfer for Semantic Dependency Parsing</a>
@@ -342,6 +336,27 @@ Furthermore, the two-stage transfer method achieved almost upper-bound performan
        </div>
       </div>
     </div>
+	
+	
+<div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">[EACL 2021] Summarising Historical Text in Modern Languages</a>
+        </h4>
+      </div>
+      <div id="collapse6" class="panel-collapse collapse">
+        <div class="panel-body">
+<p align="left" style="color:blue"> By Xutan Peng, Yi Zheng, Chenghua Lin, Advaith Siddharthan</p>
+
+<p  style="font-style:italic;" align="right">Summary by Xutan Peng</p>
+<p>
+Summarising historical text is a fundamentally important routine to historians, as it can help people collect, organize, and share knowledge. Due to cultural and linguistic changes, this task is challenging even for experts, let alone being automated. In this paper, we introduce the task of summarising documents in historical forms of a language in the corresponding modern language to the NLP community. With the help of eight linguistic experts, we compile a gold-standard text summarisation dataset, which consists of historical German (sampled from the GerManC Corpus, 1600s - 1800s) and Chinese (sampled from the Wanli Gazette, 1500s - 1600s) news summarised in modern German or Chinese. Based on cross-lingual transfer learning techniques, we propose a summarisation model that can be trained even with no cross-lingual (historical to modern) parallel data, and further benchmark it against state-of-the-art algorithms. We report automatic and human evaluations that distinguish the historical to modern language summarisation task from standard cross-lingual summarisation (i.e., modern to modern language), highlight the distinctness and value of our dataset, and demonstrate that our transfer learning approach outperforms standard Transformer-based cross-lingual benchmarks on this task. We release our code and data at <a href="https://github.com/Pzoom522/HistSumm">https://github.com/Pzoom522/HistSumm</a>.
+</p>
+<p  style="font-style:italic;" align="right" color="red"><a href="https://arxiv.org/abs/2101.10759" target="_blank">https://arxiv.org/abs/2101.10759</a></p>
+       </div>
+      </div>
+    </div>
+
 
 
 <div class="panel panel-default">
@@ -690,4 +705,5 @@ Grammar in Language Use: A Minimalist View by David Adger
 
 
 	</body>
+
 </html>
