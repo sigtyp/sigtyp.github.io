@@ -289,21 +289,13 @@ The lack of publicly available evaluation data for low-resource languages limits
 1. We provide xSID, a new cross-lingual Spoken Language Understanding (SLU) evaluation dataset covering Arabic, Chinese, Danish, Dutch, English, German, Indonesian, Italian, Japanese, Kazakh, Serbian, Turkish and an Austro-Bavarian German dialect, South Tyrolean.<br/>
 2. We experiment with new non-English auxiliary tasks for joint cross-lingual transfer on slots and intents: Universal Dependencies (UD) parsing, machine translation, and masked language modeling.<br/>
 3. We compare our approach to strong baselines: two multilingual pre-trained models (mBERT and XLM-R), and a strong machine translation model (Qin et al., 2020). The pre-trained models differ as mBERT contains most of our target languages, whereas XLM-R is pre-trained on five languages only to evaluate a real low-resource setup.<br/>
-4. The dataset and code are available in this repository.<br/><br/>
+4. The dataset and code are available in this repository. [<a href="https://bitbucket.org/robvanderg/msid" target="_blank">https://bitbucket.org/robvanderg/msid</a>]<br/><br/>
 <strong>Results:</strong><br/>
 1. For the slot filling target task, Masked Language Modeling (MLM) auxiliary task has yielded the most stable performance improvements. However, when a language is not seen during pre-training (in XLM-R), UD parsing led to an even larger performance increase.<br/>
 2. For intent classification target task, generating target language training data using machine translation (nmt-transfer) was outperforming all our proposed models, however, at a much higher computational cost.<br/>
 
 3. Our analysis further shows that nmt-transfer struggles with slot filling. Given training time and data availability trade-off, MLM multi-tasking is a viable approach for SLU.<br/>
-	
-4. The dataset, code is available in this repository [<a href="https://bitbucket.org/robvanderg/msid" target="_blank">https://bitbucket.org/robvanderg/msid</a>]<br/><br/>
 
-<strong>Results:</strong><br/>
-1. For slot filling target task, Masked Language Modeling (MLM) auxiliary task has yielded the most stable performance improvements. However, when a language is not seen during pre-training (in XLM-R), UD parsing led to an even larger performance increase.<br/>
-
-2. For intent classification target task, generating target language training data using machine translation (nmt-transfer) was outperforming all our proposed models, however, at a much higher computational cost.<br/>
-
-3. Our analysis further shows that nmt-transfer struggles with slot filling. Given training time and data availability trade-off, MLM multi-tasking is a viable approach for SLU.<br/>
 
 </p>
 <p  style="font-style:italic;" align="right" color="red"><a href="https://robvanderg.github.io/doc/naacl2021.pdf" target="_blank">https://robvanderg.github.io/doc/naacl2021.pdf</a></p>
