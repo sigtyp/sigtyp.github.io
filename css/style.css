@@ -316,6 +316,12 @@
 				font-size: 1.4em;
 			}
 
+			.small
+			{
+				padding: 1em 1em;
+				font-size: 0.7em;
+			}
+
 /*********************************************************************************/
 /* Icons                                                                         */
 /* Powered by Font Awesome by Dave Gandy | http://fontawesome.io                 */
