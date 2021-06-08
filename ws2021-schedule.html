@@ -17,6 +17,9 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   		<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script-->
   		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/moment.js"></script>
+		<script type="text/javascript" src="js/moment-timezone.js"></script>
+		<script type="text/javascript" src="js/timezones.js"></script>
 		<script src="js/skel.min.js"></script>
 			<script src="js/skel-panels.min.js"></script>
 		<script src="js/init.js"></script>
@@ -114,21 +117,30 @@
 							<header>
 				<h2>  <font color="red">S</font><font color="yellow">I</font><font color="green">G</font><font color="brown">T</font><font color="blue">Y</font><font color="purple">P</font>2021 — JUNE,10th — ONLINE</h2> </header>
 
+<p style="font-size:18px"><strong>
+The schedule for different time zones is also available <a href="https://docs.google.com/spreadsheets/d/1yI-UyPQ4v2FxX89F8lWdaToC-lOakRKkbzeYXixs8AQ/edit?usp=sharing"> here </strong></a>
+</p>
 <hr style="border-top: dotted 2px;"/>						
 <p style="font-size:18px">
 
-<strong>Time zone: TBA</strong>
+<strong>Choose your time zone: </strong>
 							</p>
+
+
+      <select id="timezone-select" class="form-control"></select>
+<br/>
+
+<p class="modtime" style="font-size:18px"> &nbsp;&nbsp;Starts: <font data-time="2021-06-09 18:00">06:00 PM</font> &nbsp;&nbsp;&nbsp; Ends: <font data-time="2021-06-09 18:15">06:15 PM</font></p>
   <div class="panel-group" id="accordion">
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" style="font-size:18px">TBA  Opening Session</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" style="font-size:18px">Opening Session by Edoardo Ponti</a>
         </h4>
       </div>
       <div id="collapse1" class="panel-collapse collapse">
         <div class="panel-body">
-<p align="left" style="color:blue"> By SIGTYP2021 Organizing Committee</p>
+<p align="left" style="color:blue"> By Edoardo Ponti</p>
 <p>
 Opening remarks: general comments about SIGTYP development, SIGTYP2021 submissions, shared task, etc. 
 </p>
@@ -139,17 +151,20 @@ Opening remarks: general comments about SIGTYP development, SIGTYP2021 submissio
 
 <br/> 
 <h3 style="font-size:21px"><font color="green">&nbsp;Morphology Module&nbsp;</font></h3><br/>
+<p class="modtime" style="font-size:18px">&nbsp;&nbsp;Session 1 &nbsp;&nbsp;Starts: <font data-time="2021-06-09 18:15">06:15 PM</font> &nbsp;&nbsp;&nbsp; Ends: <font data-time="2021-06-09 20:30">08:30 PM</font> (Moderators: Ryan Cotterell, Eleanor Chodroff)</p>
+<p class="modtime" style="font-size:18px">&nbsp;&nbsp;Session 2 &nbsp;&nbsp;Starts: <font data-time="2021-06-09 22:30">10:30 PM</font> &nbsp;&nbsp;&nbsp; Ends: <font data-time="2021-06-10 01:00">01:00 AM</font> (Moderators: Khuyagbaatar Batsuren, Ekaterina Vylomova, Ryan Cotterell)</p>
+<p class="modtime" style="font-size:18px">&nbsp;&nbsp;Session 3 &nbsp;&nbsp;Starts: <font data-time="2021-06-10 11:00">11:00 AM</font> &nbsp;&nbsp;&nbsp; Ends: <font data-time="2021-06-10 13:30">13:30 PM</font> (Moderators: Gabriella Lapesa, Edoardo Ponti, Ryan Cotterell)</p>
  <p style="font-size:18px"> &nbsp;&nbsp;&nbsp;Registration: <a href="https://forms.gle/FfwgGsKzYaYtRobR6">https://forms.gle/FfwgGsKzYaYtRobR6</a> </p>
 <br/>  
 <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#ktalk-morphology">Time TBA: Keynote Talk by David Yarowsky: Bible-based Morphology, Typology and NLP in 1000+ Languages &nbsp;&nbsp;&nbsp; Live Q&A Session: TBA</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#ktalk-morphology"> Keynote Talk by David Yarowsky: Bible-based Morphology, Typology and NLP in 1000+ Languages &nbsp;&nbsp;&nbsp; Live Q&A Session: TBA</a>
         </h4>
       </div>
       <div id="ktalk-morphology" class="panel-collapse collapse">
         <div class="panel-body">
-<p align="left" style="color:red;font-size:16px">Keynote Talk by David Yarowsky: Bible-based Morphology, Typology and NLP in 1000+ Languages</p>
+<p align="left" style="color:red;font-size:16px">Keynote Talk by David Yarowsky: Bible-based Morphology, Typology and NLP in 1000+ Languages (1 hour)</p>
 <p>
 <img src="workshops/2021/keynotes/david-yarowsky.jpeg" alt="David Yarowsky" style="height:110px;float:left;margin:9px"/>
 David Yarowsky is Professor of computer science and a member of the Center for Language and Speech Processing at Johns Hopkins University.
@@ -164,7 +179,7 @@ David’s research focuses on word sense disambiguation, minimally supervised in
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#paper-2">Time TBA: Inferring Morphological Complexity from Syntactic Dependency Networks: A Test </a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#paper-2"> Inferring Morphological Complexity from Syntactic Dependency Networks: A Test (10 min)</a>
         </h4>
       </div>
       <div id="paper-2" class="panel-collapse collapse">
@@ -184,7 +199,7 @@ Research in linguistic typology has shown that languages do not fall into the ne
    <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#paper-12">Time TBA: Information-Theoretic Characterization of Morphological Fusion (Extended Abstract) </a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#paper-12">Information-Theoretic Characterization of Morphological Fusion, Extended Abstract (10 min) </a>
         </h4>
       </div>
       <div id="paper-12" class="panel-collapse collapse">
@@ -203,7 +218,7 @@ Traditionally, morphological typology divides synthetic languages into two broad
  <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#paper-23">Time TBA: Morph Call: Probing Morphosyntactic Content of Multilingual Transformers </a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#paper-23">Morph Call: Probing Morphosyntactic Content of Multilingual Transformers (15 min)</a>
         </h4>
       </div>
       <div id="paper-23" class="panel-collapse collapse">
@@ -222,7 +237,7 @@ The outstanding performance of transformer-based language models on a great vari
  <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#paper-15">Time TBA: Measuring Prefixation and Suffixation in the Languages of the World </a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#paper-15">Measuring Prefixation and Suffixation in the Languages of the World (15 min)</a>
         </h4>
       </div>
       <div id="paper-15" class="panel-collapse collapse">
@@ -241,7 +256,7 @@ It has long been recognized that suffixing is more common than prefixing in the 
  <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#paper-18">Time TBA: Predicting and Explaining French Grammatical Gender </a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#paper-18">Predicting and Explaining French Grammatical Gender (15 min)</a>
         </h4>
       </div>
       <div id="paper-18" class="panel-collapse collapse">
@@ -260,7 +275,7 @@ Grammatical gender may be determined by semantics, orthography, phonology, or co
  <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#paper-8">Time TBA: Quantitative Detection of Cognacy in the Predictive Structure of Inflection Classes: Romance Verbal Conjugations Against the Broader Typological Variation (Extended Abstract)</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#paper-8">Quantitative Detection of Cognacy in the Predictive Structure of Inflection Classes: Romance Verbal Conjugations Against the Broader Typological Variation, Extended Abstract (15 min)</a>
         </h4>
       </div>
       <div id="paper-8" class="panel-collapse collapse">
@@ -278,13 +293,15 @@ In recent years, Information Theory (with its core notion of entropy) has provid
 
 <br/> 
 <h3 style="font-size:21px"><font color="purple">&nbsp;Low-Resource Languages Module&nbsp;</font></h3><br/>
+<p class="modtime" style="font-size:18px">&nbsp;&nbsp;Session 1 &nbsp;&nbsp;Starts: <font data-time="2021-06-10 01:00">01:00 AM</font> &nbsp;&nbsp;&nbsp; Ends: <font data-time="2021-06-10 03:30">03:30 AM</font> (Moderators: Khuyagbaatar Batsuren, Ekaterina Vylomova, Ryan Cotterell)</p>
+<p class="modtime" style="font-size:18px">&nbsp;&nbsp;Session 2 &nbsp;&nbsp;Starts: <font data-time="2021-06-10 05:30">05:30 AM</font> &nbsp;&nbsp;&nbsp; Ends: <font data-time="2021-06-10 08:00">08:00 AM</font> (Moderators: Ryan Cotterell)</p>
+<p class="modtime" style="font-size:18px">&nbsp;&nbsp;Session 3 &nbsp;&nbsp;Starts: <font data-time="2021-06-10 13:30">1:30 PM</font> &nbsp;&nbsp;&nbsp; Ends: <font data-time="2021-06-10 16:00">04:00 PM</font> (Moderators: Edoardo Ponti, Irene Nikkarinen, Ryan Cotterell)</p>
   <p style="font-size:18px"> &nbsp;&nbsp;&nbsp;Registration: <a href="https://forms.gle/XJUJdvfgsxtHEkTn7">https://forms.gle/XJUJdvfgsxtHEkTn7</a> </p>
 <br/>
-
 <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#ktalk-lowresource">Time TBA: Keynote Talk by Miryam de Lhoneux: Low-resource NLP: Lessons from Dependency Parsing &nbsp;&nbsp;&nbsp; Live Q&A Session: TBA</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#ktalk-lowresource">Keynote Talk by Miryam de Lhoneux: Low-resource NLP: Lessons from Dependency Parsing (45 min)</a>
         </h4>
       </div>
       <div id="ktalk-lowresource" class="panel-collapse collapse">
@@ -306,7 +323,7 @@ This talk is about low-resource NLP, with a primary focus on dependency parsing.
  <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#paper-14">Time TBA: Family of Origin and Family of Choice: Massively Parallel Lexiconized Iterative Pretraining for Severely Low Resource Machine Translation </a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#paper-14">Family of Origin and Family of Choice: Massively Parallel Lexiconized Iterative Pretraining for Severely Low Resource Machine Translation (15 min)</a>
         </h4>
       </div>
       <div id="paper-14" class="panel-collapse collapse">
@@ -325,7 +342,7 @@ We translate a closed text that is known in advance into a severely low resource
  <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#paper-27">Time TBA: Towards Figurative Language Generation in Afrikaans (Extended Abstract)</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#paper-27">Towards Figurative Language Generation in Afrikaans, Extended Abstract (15 min)</a>
         </h4>
       </div>
       <div id="paper-27" class="panel-collapse collapse">
@@ -344,7 +361,7 @@ This paper presents an LSTM-based approach to figurative language generation, wh
  <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#paper-13">Time TBA: Graph Convolutional Network for Swahili News Classification (Extended Abstract)</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#paper-13">Graph Convolutional Network for Swahili News Classification, Extended Abstract (15 min)</a>
         </h4>
       </div>
       <div id="paper-13" class="panel-collapse collapse">
@@ -364,7 +381,7 @@ In this work, we demonstrate the ability of Text Graph Convolutional Network (Te
  <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#paper-26">Time TBA: Let-Mi: An Arabic Levantine Twitter Dataset for Misogynistic Language (Extended Abstract)</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#paper-26">Let-Mi: An Arabic Levantine Twitter Dataset for Misogynistic Language, Extended Abstract (15 min)</a>
         </h4>
       </div>
       <div id="paper-26" class="panel-collapse collapse">
@@ -385,7 +402,7 @@ Our dataset is available at <a href="https://github.com/bilalghanem/let-mi">http
  <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#paper-6">Time TBA: Improving Cross-Lingual Sentiment Analysis via Conditional Language Adversarial Adaptation </a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#paper-6">Improving Cross-Lingual Sentiment Analysis via Conditional Language Adversarial Adaptation (15 min)</a>
         </h4>
       </div>
       <div id="paper-6" class="panel-collapse collapse">
@@ -406,7 +423,7 @@ Our source code is released at <a href="https://github.com/hemanthkandula/clan">
  <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#paper-17">Time TBA: Multilingual Slot and Intent Detection (xSID) with Cross-lingual Auxiliary Tasks (Extended Abstract) </a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#paper-17">Multilingual Slot and Intent Detection (xSID) with Cross-lingual Auxiliary Tasks, Extended Abstract (15 min) </a>
         </h4>
       </div>
       <div id="paper-17" class="panel-collapse collapse">
@@ -425,7 +442,7 @@ Digital assistants are becoming an integral part of everyday life. However, comm
  <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#paper-25">Time TBA: Unsupervised Self-Training for Unsupervised Cross-Lingual Transfer (Extended Abstract)</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#paper-25">Time TBA: Unsupervised Self-Training for Unsupervised Cross-Lingual Transfer, Extended Abstract (15 min)</a>
         </h4>
       </div>
       <div id="paper-25" class="panel-collapse collapse">
@@ -444,13 +461,15 @@ Labelled data is scarce, especially for low-resource languages.  This beckons th
 
 <br/> 
 <h3 style="font-size:21px"><font color="orange">&nbsp;Typological Knowledge in NLP Module&nbsp;</font></h3><br/>
+<p class="modtime" style="font-size:18px">&nbsp;&nbsp;Session 1 &nbsp;&nbsp;Starts: <font data-time="2021-06-10 03:30">03:30 AM</font> &nbsp;&nbsp;&nbsp; Ends: <font data-time="2021-06-10 05:30">05:30 AM (Moderators: Ekaterina Vylomova)</font></p>
+<p class="modtime" style="font-size:18px">&nbsp;&nbsp;Session 2 &nbsp;&nbsp;Starts: <font data-time="2021-06-10 16:00">4:30 PM</font> &nbsp;&nbsp;&nbsp; Ends: <font data-time="2021-06-10 18:00">06:00 PM</font> (Moderators: Gabriella Lapesa, Elizabeth Salesky)</p>
   <p style="font-size:18px"> &nbsp;&nbsp;&nbsp;Registration: <a href="https://forms.gle/maPPcL88aAaYJp3A6">https://forms.gle/maPPcL88aAaYJp3A6</a> </p>
 <br/>
 
 <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#ktalk-typological-knowledge">Time TBA: Keynote Talk by Johannes Bjerva: Typological Feature Prediction and Blinding for Cross-Lingual NLP &nbsp;&nbsp;&nbsp; Live Q&A Session: TBA</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#ktalk-typological-knowledge">Keynote Talk by Johannes Bjerva: Typological Feature Prediction and Blinding for Cross-Lingual NLP (45 min)</a>
         </h4>
       </div>
       <div id="ktalk-typological-knowledge" class="panel-collapse collapse">
@@ -472,7 +491,7 @@ I will discuss the usefulness of typological features in NLP, with a focus on lo
  <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#paper-7">Time TBA: Improving the Performance of UDify with Linguistic Typology Knowledge</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#paper-7">Improving the Performance of UDify with Linguistic Typology Knowledge (15 min)</a>
         </h4>
       </div>
       <div id="paper-7" class="panel-collapse collapse">
@@ -491,7 +510,7 @@ UDify is the state-of-the-art language-agnostic dependency parser which is train
  <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#paper-10">Time TBA: FrameNet and Typology</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#paper-10">FrameNet and Typology (15 min)</a>
         </h4>
       </div>
       <div id="paper-10" class="panel-collapse collapse">
@@ -509,7 +528,7 @@ FrameNet and the Multilingual FrameNet project have produced multilingual semant
  <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#paper-16">Time TBA: Exploring Linguistic Typology Features in Multilingual Machine Translation (Extended Abstract)</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#paper-16">Exploring Linguistic Typology Features in Multilingual Machine Translation, Extended Abstract (15 min)</a>
         </h4>
       </div>
      <div id="paper-16" class="panel-collapse collapse">
@@ -528,7 +547,7 @@ We  explore  whether  linguistic  typology  features  can  impact  multilingual 
  <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#paper-5">Time TBA: A Universal Dependencies Corpora Maintenance Methodology Using Downstream Application</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#paper-5">A Universal Dependencies Corpora Maintenance Methodology Using Downstream Application (15 min)</a>
         </h4>
       </div>
       <div id="paper-5" class="panel-collapse collapse">
@@ -547,7 +566,7 @@ This paper investigates updates of Universal Dependencies (UD) treebanks in 23 l
  <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#paper-11">Time TBA: A Look to Languages through the Glass of BPE Compression (Extended Abstract)</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#paper-11">A Look to Languages through the Glass of BPE Compression, Extended Abstract (15 min)</a>
         </h4>
       </div>
       <div id="paper-11" class="panel-collapse collapse">
@@ -567,7 +586,7 @@ Regardless of the language, the first merge operations tend to have a stronger i
  <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#paper-28">Time TBA: Improving Access to Untranscribed Speech by Leveraging Spoken Term Detection and Self-supervised Learning of Speech Representations (Extended Abstract)</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#paper-28">Improving Access to Untranscribed Speech by Leveraging Spoken Term Detection and Self-supervised Learning of Speech Representations, Extended Abstract (15 min)</a>
         </h4>
       </div>
       <div id="paper-28" class="panel-collapse collapse">
@@ -585,13 +604,15 @@ We summarise findings from our recent work showing that a large self-supervised 
 
 <br/> 
 <h3 style="font-size:21px"><font color="green">&nbsp;Linguistic Typology Module&nbsp;</font></h3><br/>
+<p class="modtime" style="font-size:18px">&nbsp;&nbsp;Session 1 &nbsp;&nbsp;Starts: <font data-time="2021-06-09 20:30">08:30 PM</font> &nbsp;&nbsp;&nbsp; Ends: <font data-time="2021-06-09 22:30">10:30 PM</font> (Moderators: Ryan Cotterell, Eleanor Chordoff)</p>
+<p class="modtime" style="font-size:18px">&nbsp;&nbsp;Session 2 &nbsp;&nbsp;Starts: <font data-time="2021-06-10 08:00">08:00 AM</font> &nbsp;&nbsp;&nbsp; Ends: <font data-time="2021-06-10 10:00">10:00 AM</font> (Moderators: Gabriella Lapesa)</p>
  <p style="font-size:18px"> &nbsp;&nbsp;&nbsp; Registration: <a href="https://forms.gle/bAL1KXPDWHjMx7D66">https://forms.gle/bAL1KXPDWHjMx7D66</a> </p>
 <br/>
 
 <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#ktalk-ling-typology">Time TBA: Keynote Talk by Claire Bowern: Universals: Some key questions for phonetic typology &nbsp;&nbsp;&nbsp; Live Q&A Session: TBA</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#ktalk-ling-typology">Keynote Talk by Claire Bowern: Universals: Some key questions for phonetic typology (1 hour)</a>
         </h4>
       </div>
       <div id="ktalk-ling-typology" class="panel-collapse collapse">
@@ -615,7 +636,7 @@ The SIGTYP2021 theme of "Universals and Diversity" raises many interesting quest
  <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#paper-1">Time TBA: OTEANN: Estimating the Transparency of Orthographies with an Artificial Neural Network </a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#paper-1">OTEANN: Estimating the Transparency of Orthographies with an Artificial Neural Network (15 min)</a>
         </h4>
       </div>
       <div id="paper-1" class="panel-collapse collapse">
@@ -634,7 +655,7 @@ To transcribe spoken language to written medium, most alphabets enable an unambi
  <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#paper-21">Time TBA: Modeling Linguistic Typology - A Probabilistic Graphical Models Approach (Extended Abstract)</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#paper-21">Modeling Linguistic Typology - A Probabilistic Graphical Models Approach, Extended Abstract (15 min)</a>
         </h4>
       </div>
       <div id="paper-21" class="panel-collapse collapse">
@@ -652,7 +673,7 @@ In this paper, we propose to use probabilistic graphical models as a new theoret
  <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#paper-4">Time TBA: On the Universality of Lexical Concepts (Extended Abstract)</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#paper-4">On the Universality of Lexical Concepts, Extended Abstract (15 min)</a>
         </h4>
       </div>
       <div id="paper-4" class="panel-collapse collapse">
@@ -672,7 +693,7 @@ We posit that lexicalized concepts are universal, and thus can be annotated cros
 <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#paper-9">Time TBA: Subword Geometry: Picturing Word Shapes (Extended Abstract)</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#paper-9">Subword Geometry: Picturing Word Shapes, Extended Abstract (15 min)</a>
         </h4>
       </div>
       <div id="paper-9" class="panel-collapse collapse">
@@ -692,7 +713,7 @@ In this work in progress, we are investigating the structural properties of subw
  <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#paper-20">Time TBA: Plugins for Structurally Varied Languages in XMG Framework (Extended Abstract)</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#paper-20">Plugins for Structurally Varied Languages in XMG Framework, Extended Abstract (no video)</a>
         </h4>
       </div>
       <div id="paper-20" class="panel-collapse collapse">
@@ -711,12 +732,11 @@ This paper aims to suggest an XMG-based design of metagrammatical classes storin
 
 <br/>
 <h3 style="font-size:21px"><font color="blue">&nbsp;Shared Task Module&nbsp;</font></h3><br/>
-
-
+<p class="modtime" style="font-size:18px">&nbsp;&nbsp;Session 2 &nbsp;&nbsp;Starts: <font data-time="2021-06-10 10:00">10:00 AM</font> &nbsp;&nbsp;&nbsp; Ends: <font data-time="2021-06-10 11:00">11:00 AM</font> (Moderators: Elizabeth Salesky, Sabrina Mielke, Badr Abdullah)</p>
  <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#shared-task">Time TBA: Shared Task 2021 Overview </a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#shared-task">Shared Task 2021 Overview (15 min)</a>
         </h4>
       </div>
       <div id="shared-task" class="panel-collapse collapse">
@@ -736,12 +756,12 @@ While language identification is a fundamental speech and language processing ta
 <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#paper-24">Time TBA: Language ID Prediction from Speech Using Self-Attentive Pooling and 1D-Convolutions </a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#paper-24">Language ID Prediction from Speech Using Self-Attentive Pooling and 1D-Convolutions (15 min)</a>
         </h4>
       </div>
       <div id="paper-24" class="panel-collapse collapse">
         <div class="panel-body"  style="align: center; text-align:center">
-<p align="left" style="color:red;font-size:16px">Language ID Prediction from Speech Using Self-Attentive Pooling and 1D-Convolutions </p>
+<p align="left" style="color:red;font-size:16px">Language ID Prediction from Speech Using Self-Attentive Pooling and 1D-Convolutions</p>
 <p align="left" style="color:blue"> By Roman Bedyakin and Nikolay Mikhaylovskiy</p>
 <p align="left">
 This memo describes NTR-TSU submission for SIGTYP 2021 Shared Task on predicting language IDs from speech. Spoken Language Identification (LID) is an important step in a multilingual Automated Speech Recognition (ASR) system pipeline. For many low-resource and endangered languages, only single-speaker recordings may be available, demanding a need for domain and speaker-invariant language ID systems. In this memo, we show that a convolutional neural network with a Self-Attentive Pooling layer shows promising results for the language identification task.</p>
@@ -756,7 +776,7 @@ This memo describes NTR-TSU submission for SIGTYP 2021 Shared Task on predicting
 <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#paper-29">Time TBA: A ResNet-50-based Convolutional Neural Network Model for Language ID Identification from Speech Recordings</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#paper-29">A ResNet-50-based Convolutional Neural Network Model for Language ID Identification from Speech Recordings (15 min)</a>
         </h4>
       </div>
       <div id="paper-29" class="panel-collapse collapse">
@@ -776,7 +796,7 @@ This paper describes the model built for the SIGTYP 2021 Shared Task aimed at id
 <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#paper-31">Time TBA: Anlirika: An LSTM–CNN Flow Twister for Spoken Language Identification</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#paper-31">Anlirika: An LSTM–CNN Flow Twister for Spoken Language Identification (15 min)</a>
         </h4>
       </div>
       <div id="paper-31" class="panel-collapse collapse">
@@ -797,7 +817,7 @@ The paper presents Anlirika’s submission to SIGTYP 2021 Shared Task on Robust 
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse30" style="font-size:18px">Time TBA: Linguistic Trivia Games</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse30" style="font-size:18px">Between Sessions: Linguistic Trivia Games</a>
         </h4>
       </div>
       <div id="collapse30" class="panel-collapse collapse">
@@ -816,7 +836,7 @@ TBA
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse32" style="font-size:18px">Time TBA: Open Mic Discussion</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse32" style="font-size:18px">Between Sessions: Open Mic Discussion</a>
         </h4>
       </div>
       <div id="collapse32" class="panel-collapse collapse">
