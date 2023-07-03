@@ -1,0 +1,414 @@
+<!DOCTYPE HTML>
+<!--
+    Imagination by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>MRL 2023 Shared Task on Multi-lingual Multi-task Information Retrieval</title>
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-panels.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+		</noscript>
+	</head>
+	<body>
+
+	<div id="header-wrapper">
+
+		<!-- Header -->
+			<div id="header">
+				<div class="container">
+						
+					<!-- Logo -->
+						<div id="logo">
+							<a href="index.html"><img src="images/sigtyp1.jpg"  style="width:70px" alt="SIGTYP"></a>
+							<!--h1><a href="#"><font color=red>S</font>IG<font color=red>T</font>YP</a></h1-->
+						</div>
+					
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html">Homepage</a></li>
+								<li><a href="constitution.html">Constitution</a></li>
+								<li><a href="members.html">Members</a></li>
+								<li class="active"><a href="workshop.html">Workshop</a></li>
+								<li><a href="lectures.html">Lectures</a></li>
+								<li><a href="blog.html">Blog</a></li>
+							</ul>
+						</nav>
+	
+				</div>
+			</div>
+		<!-- Header -->
+
+		<!-- Banner -->
+			<div id="banner">
+				<div class="container">
+	
+					<section>
+						<!--span class="fa fa-cubes"></span-->
+						<header>
+							<h2 > </h2>
+							<h2 > </h2>
+<h2 > </h2>
+							<span class="byline"> </span>
+						</header>
+						<!--a href="#" class="button medium">Fusce ultrices fringilla</a-->
+					</section>	
+				</div>
+			</div>
+		<!-- /Banner -->
+
+	</div>
+
+	<!-- Main -->
+		<div id="main">
+			<div class="container">
+				<div class="row">
+		
+					<div class="9u skel-cell-important">
+						<section>
+				<header>
+				<h4 style="font-size:28px;"> MRL 2023 Shared Task on Multi-lingual Multi-task Information Retrieval</h4> </header>
+<br/>
+<!-- <h3 style="font-size:20px;"> <strong>Description and Objectives </strong></h3>
+<br/>
+
+<p  style="font-size:17px">
+    Morphology has been widely studied as a word-level task, although in many languages it has complex hierarchical relationships with different layers of language, such as phonetic, syntactic or semantic representations of phrase or sentence-level utterances. The extent of this relationship as well as its complexity, however, still remain unknown. The new shared task on multilingual clause-level morphology aims to investigate methods for morphological analysis or generation of different forms in languages with varying typology, where the modeling and alignment of morphosyntactic structure is accomplished at the level of clauses.
+</p>
+
+<p  style="font-size:17px">
+    The shared task aims to provide a new benchmark that can help bring novel understandings in:
+</p>
+							
+	<ul>
+	<li>&nbsp;&nbsp;&nbsp;&#8226; The relationship between morphology and syntax in different languages</li>
+	<li>&nbsp;&nbsp;&nbsp;&#8226; How morphosyntactic structure aligns across languages with varying typology</li>
+	<li>&nbsp;&nbsp;&nbsp;&#8226; The performance of conventional statistical methods for language modeling or representation learning in learning formal and semantic features that can generalize across languages, scripts and syntactic structures</li>
+	<li>&nbsp;&nbsp;&nbsp;&#8226; The limitations of conventional methods for morphological or syntactic modeling as well as the specifications required for developing more comprehensive and theoretically complete models of language</li>
+	</ul>
+
+
+<br/>
+<h3 style="font-size:20px;"> <strong>Languages</strong></h3>
+<br/>
+
+<p  style="font-size:17px">
+    The shared task will initially include six languages from different language families and with varying morphological characteristics: English, French, German, Hebrew, Russian and Turkish. We anticipate the extension of the benchmark to include more languages as time and resources become available.
+
+</p>
+
+<br/>
+<h3 style="font-size:20px;"> <strong>Tasks</strong></h3>
+<br/>
+
+<p  style="font-size:17px">
+	The shared task can be studied in terms of three parts. 
+	<br/>
+	<br/>
+	<strong>Task 1: Inflection</strong>
+	<br/>
+	<br/>
+	In this task the input is verbal lemma (the form given as a lexicon entry) and a specific set of inflectional features. The task requires generating the desired output clause manifesting the features.
+</p>
+
+<p  style="font-size:17px">
+</br>
+Examples
+</br>
+</p>
+
+<table>
+<thead>
+  <tr>
+    <th><strong>Languages</strong></th>
+    <th style="width:70%"><strong>Input</strong></th>
+    <th><strong>Output</strong></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>English</td>
+    <td style="width:70%">give IND;FUT;NOM(1,SG);ACC(3,SG,MASC);DAT(3,SG,FEM)</td>
+    <td>I will give him to her</td>
+  </tr>
+  <tr>
+    <td>German</td>
+    <td style="width:70%">geben IND;FUT;NOM(1,SG);ACC(3,SG,MASC);DAT(3,SG,FEM)</td>
+    <td>Ich werde ihn ihr geben
+	</td>
+  </tr>
+  <tr>
+    <td>Turkish</td>
+    <td style="width:70%">vermek IND;FUT;NOM(1,SG);ACC(3,SG);DAT(3,SG)</td>
+    <td>Onu ona vereceğim</td>
+  </tr>
+  <tr>
+    <td>Hebrew</td>
+    <td style="width:70%">נתן IND;FUT;NOM(1,SG);ACC(3,SG,MASC);DAT(3,SG,FEM)</td>
+    <td>אתן אותו לה</td>
+  </tr>
+</tbody>
+</table>
+
+<p  style="font-size:17px">
+	<br/>
+	<br/>
+	<strong>Task 2: Reinflection</strong>
+	<br/>
+	<br/>
+	In this task the input is an <i>inflected clause</i>, accompanied by its <i>features</i>, and <i>a new set of features</i> representing the desired form. The task is to generate the desired output that will represent the desired features.
+</p>
+
+<p  style="font-size:17px">
+</br>
+Examples
+</br>
+</p>
+
+<table>
+	<thead>
+	  <tr>
+		<th><strong>Languages</strong></th>
+		<th style="width:70%"><strong>Input</strong></th>
+		<th><strong>Output</strong></th>
+	  </tr>
+	</thead>
+	<tbody>
+	  <tr>
+		<td>English</td>
+		<td style="width:70%">I will give him to her IND;FUT;NOM(1,SG);ACC(3,SG,MASC);DAT(3,SG,FEM)<br/>IND;PRS;NOM(1,PL);ACC(2);DAT(3,PL);NEG		</td>
+		<td>We don't give you to them</td>
+	  </tr>
+	  <tr>
+		<td>German</td>
+		<td style="width:70%">Ich werde ihn ihr geben IND;FUT;NOM(1,SG);ACC(3,SG,MASC);DAT(3,SG,FEM)<br/>IND;PRS;NOM(1,PL);ACC(2,SG);DAT(3,PL);NEG
+			</td>
+		<td>Wir geben dich ihnen nicht
+		</td>
+	  </tr>
+	  <tr>
+		<td>Turkish</td>
+		<td style="width:70%">Onu ona vereceğim IND;FUT;NOM(1,SG);ACC(3,SG,MASC);DAT(3,SG,FEM) <br/> IND;PRS;PROG;NOM(1,PL);ACC(2,SG);DAT(3,PL);NEG</td>
+		<td>Seni onlara vermiyoruz</td>
+	  </tr>
+	  <tr>
+		<td>Hebrew</td>
+		<td style="width:70%"> אתן אותו לה IND;FUT;NOM(1,SG);ACC(3,SG,MASC);DAT(3,SG,FEM) <br/> IND;PRS;NOM(1,PL,MASC);ACC(2,SG,MASC);DAT(3,PL,FEM);NEG</td>
+		<td>אנחנו לא נותנים אותך להן</td>
+	  </tr>
+	</tbody>
+	</table>
+	
+	<p  style="font-size:17px">
+		<br/>
+		<br/>
+		<strong>Task 3: Analysis</strong>
+		<br/>
+		<br/>
+		This task is the opposite of task 1, where a system is required to analyze given <i>clauses</i> and generate the <i>lemma</i> and <i>features</i> underlying them.	</p>
+	
+	<p  style="font-size:17px">
+	</br>
+	Examples
+	</br>
+	</p>
+
+	<table>
+		<thead>
+		  <tr>
+			<th><strong>Languages</strong></th>
+			<th style="width: 30%"><strong>Input</strong></th>
+			<th><strong>Output</strong></th>
+		  </tr>
+		</thead>
+		<tbody>
+		  <tr>
+			<td>English</td>
+			<td style="width: 30%">I will give him to her</td>
+			<td>give IND;FUT;NOM(1,SG);ACC(3,SG,MASC);DAT(3,SG,FEM)</td>
+		  </tr>
+		  <tr>
+			<td>German</td>
+			<td style="width: 30%">Ich werde ihn ihr geben</td>
+			<td>geben IND;FUT;NOM(1,SG);ACC(3,SG,MASC);DAT(3,SG,FEM)
+			</td>
+		  </tr>
+		  <tr>
+			<td>Turkish</td>
+			<td style="width: 30%">Onu ona vereceğim</td>
+			<td>vermek IND;FUT;NOM(1,SG);ACC(3,SG);DAT(3,SG)</td>
+		  </tr>
+		  <tr>
+			<td>Hebrew</td>
+			<td style="width: 30%">אתן אותו לה</td>
+			<td>נתן IND;FUT;NOM(1,SG);ACC(3,SG,MASC);DAT(3,SG,FEM)</td>
+		  </tr>
+		</tbody>
+		</table>
+
+		<br/>
+<h3 style="font-size:20px;"> <strong>Participation</strong></h3>
+<br/>
+
+<p  style="font-size:17px">
+	Interested parties are invited to join the mailing list at <a href="mailto:participants-mcmsharedtask-2022@googlegroups.com">participants-mcmsharedtask-2022@googlegroups.com</a> to be involved in the competition. 
+
+All participating systems will be evaluated together with our baselines against the same held-out test set, to be released shortly before evaluation. Submitted systems can compete in some or all sub-tasks. <strong><a href="https://github.com/Fenerator/mrl_2022_shared_task_evaluation">Submission system</a> is now open!</strong>
+
+Participating teams will be invited to submit a short paper describing their work to the MRL workshop and to present it in a special session in the workshop. Paper submissions must follow the EMNLP paper format and sent to <strong><a href="https://softconf.com/emnlp2022/mrl-2022">Softconf Conference Link of MRL 2022</a></strong> before the paper submission deadline.
+<br/>
+	<br/>
+	Participating teams will be invited to submit a short paper describing their work to the MRL workshop and to present it in a special session in the workshop.
+</p>
+
+<h3 style="font-size:20px;"> <strong>Data</strong></h3>
+<br/>
+
+<p  style="font-size:17px">
+	Training and development data for building systems for the above three tasks in six languages can be found on <a href="https://github.com/omagolda/MRL_shared-task_2022">our github repository</a>.
+</p>	
+
+<h3 style="font-size:20px;"> <strong>Important dates</strong></h3>
+<br/>
+
+
+<p  style="font-size:17px">
+	May 16, 2022: Release of training and development data
+	<br/>
+	<strong><s>July 20, 2022</s> August 7, 2022: Release of testing data (including surprise languages)</strong>
+	<br/>
+	<strong>August 14, 2022: Deadline to release external data and resources used in systems</strong>
+	<br/>
+	<strong><s>July 30, 2022</s> August 22, 2022: Deadline for submission of systems</strong>
+	<br/>
+	August 25, 2022: Release of rankings and results
+	<br/>
+	September 15, 2022: Deadline for submitting system description papers
+	<br/>
+	October 10, 2022: Paper notifications
+	<br/>
+	November 9, 2022: Camera-ready papers and posters due
+	<br/>
+	December 8, 2022: Workshop
+	<br/>
+</p>
+
+<h3 style="font-size:20px;"> <strong>Evaluation</strong></h3>
+<br/>
+
+<p  style="font-size:17px">
+	System outputs will be evaluated using standard evaluation metrics used in morphological analysis and inflection, including the exact match accuracy ratings (precision, recall and F-1) as well as metrics for generated text, such as the edit distance.
+
+</p>
+
+<h3 style="font-size:20px;"> <strong>Ranking</strong></h3>
+<br/>
+
+<p  style="font-size:17px">
+	The systems will be evaluated based on the global ranking on all benchmark languages. Participants can submit systems that are language-specific (monolingual) and their systems will be evaluated as a partial submission to the specific language their system is trained on. We anticipate awarding a prize to the winning team.
+
+</p>
+
+<h3 style="font-size:20px;"> <strong>Additional resources</strong></h3>
+<br/>
+<p  style="font-size:17px">
+		The shared task allows participants to use external resources or tools as long as they are openly available and can be, in theory, used by other participants for research purposes. In case participants decide to use external resources and data in their system they should contact the organizers in case the specific resources would be permitted, in such cases specific information on the used resources and how they can be obtained should be shared on the participants mail group at the latest by August 20th, 2022.
+	
+</p>
+
+
+<h3 style="font-size:20px;"> <strong>Organizers</strong></h3>
+<br/>
+
+<p  style="font-size:17px">
+	Omer Goldman, Bar Ilan University
+	<br/>
+	Reut Tsarfaty, Bar Ilan University
+	<br/>
+	Djame Seddah, INRIA Paris
+	<br/>
+	Benjamin Muller, INRIA Paris and Sorbonne University
+	<br/>
+	Benoît Sagot, INRIA Paris
+	<br/>
+	Hila Gonen, University of Washington and Meta AI
+	<br/>
+	Jamshidbek Mirzakhalov, Salesforce
+	<br/>
+	Kelechi Ogueji, University of Waterloo
+	<br/>
+	Francesco Tinner, University of Zurich
+	<br/>
+	Duygu Ataman, New York University
+	<br/>	
+</p> -->
+<!-- 
+<header>
+  <h2 style="font-size:27px">Contact</h2>
+</header>
+<p  style="font-size:17px"> &nbsp;&nbsp;&nbsp; Feel free to join the mailing list at <a href="mailto:participants-mcmsharedtask-2022@googlegroups.com">participants-mcmsharedtask-2022@googlegroups.com</a> or contact <a href="mailto:mrlw2022@gmail.com">mrlw2022@gmail.com</a> if you have any questions about the workshop. </p>
+   -->
+
+<!-- <div align="center"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdKvUOOUQSUpbOCWGR6a3zXUTEhhDqTRIXwhlgPwGPrpNpPcQ/viewform?usp=sf_link" class="button medium">Register!</a></div> -->
+</section>
+</div>
+					
+					<div class="3u">
+						<section class="sidebar">
+							<header>
+								<h2>Workshops</h2>
+							</header>
+							<ul class="default">
+								<li><a href="ws2023-mrl.html">&raquo; MRL 2023</a></li>
+								<li><a href="ws2023-sigtyp.html">&raquo; SIGTYP 2023</a></li>
+								<!-- <li><a href="ws2022-sigtyp.html">&raquo; SIGTYP 2022</a></li>
+								<li><a href="ws2022-mrl.html">&raquo; MRL 2022</a></li>
+								<li><a href="ws2021.html">&raquo; SIGTYP 2021</a></li>
+								<li><a href="ws2020.html">&raquo; SIGTYP 2020</a></li>
+								<li><a href="ws2019.html">&raquo; TyP-NLP 2019</a></li> -->
+							</ul>
+							<br/><br/>
+							<header>
+								<h2>Shared Tasks</h2>
+							</header>
+							<ul class="default">
+								<li><a href="st2023.html">&raquo; 2023: Cognate and Derivative Detection for Low-Resourced Languages</a></li>
+								<!-- <li><a href="st2022.html">&raquo;2022: Prediction of Cognate Reflexes</a></li>
+								<li><a href="st2022-mrl.html">&raquo;  <font color="red">2022 (MRL): Multilingual Clause-level Morphology</font></a></li>
+								<li><a href="st2021.html">&raquo; 2021: Robust Language ID from Speech</a></li>
+								<li><a href="st2020.html">&raquo; 2020: Prediction of Typological Features</a></li> -->
+							</ul>
+						</section>
+						
+					</div>
+				
+				</div>
+			</div>
+		</div>
+	<!-- Main -->
+
+	
+	<!-- Copyright -->
+		<div id="copyright">
+			<div class="container">
+				Contact Email: <a href="mailto:mattis_list@eva.mpg.de">Mattis List</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  WebMaster: <a href="http://kat.academy">EKATERINA VYLOMOVA</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Design: <a href="http://templated.co">TEMPLATED</a>
+			</div>
+		</div>
+
+
+	</body>
+</html>
