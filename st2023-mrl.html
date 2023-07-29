@@ -83,250 +83,94 @@
 				<header>
 				<h4 style="font-size:28px;"> MRL 2023 Shared Task on Multi-lingual Multi-task Information Retrieval</h4> </header>
 <br/>
-<!-- <h3 style="font-size:20px;"> <strong>Description and Objectives </strong></h3>
+<h3 style="font-size:20px;"> <strong>Description and Objectives </strong></h3>
 <br/>
 
 <p  style="font-size:17px">
-    Morphology has been widely studied as a word-level task, although in many languages it has complex hierarchical relationships with different layers of language, such as phonetic, syntactic or semantic representations of phrase or sentence-level utterances. The extent of this relationship as well as its complexity, however, still remain unknown. The new shared task on multilingual clause-level morphology aims to investigate methods for morphological analysis or generation of different forms in languages with varying typology, where the modeling and alignment of morphosyntactic structure is accomplished at the level of clauses.
+Large language models continue to demonstrate outstanding performance in many applications that require competence in language understanding and generation. This performance is especially prominent in English, where large amounts of public evaluation benchmarks for various downstream tasks are available. However, the extent to which language models can be reliably deployed in terms of different languages and domains are not still well established. Recent efforts in creating benchmarks, such as the XTREME-UP benchmark, providing extended ranges of languages in large sets of downstream tasks allow a more inclusive setting for studying different characteristics of large language models under different categories and properties of data and domains.
+
+In this new shared task we extend the <a href="https://github.com/google-research/xtreme-up">XTREME-UP</a> benchmark to include various out-of-domain data sets in a selected set of data-scarce and typologically-diverse languages. Our evaluation benchmark consists of the multi-domain public data sets in XTREME-UP, where we provide a multi-task evaluation setting, in particular in the tasks of Named Entity Recognition (NER) and Reading Comprehension (RC), on test sets curated from articles on Wikipedia. The main objective of the shared task is to assess and understand the multilingual characteristics of the inference capability of multilingual language models in understanding and generating language based on logical, factual or causal relationships between knowledge contained over long contexts of text, especially under low-resource settings.
 </p>
 
-<p  style="font-size:17px">
-    The shared task aims to provide a new benchmark that can help bring novel understandings in:
-</p>
-							
-	<ul>
-	<li>&nbsp;&nbsp;&nbsp;&#8226; The relationship between morphology and syntax in different languages</li>
-	<li>&nbsp;&nbsp;&nbsp;&#8226; How morphosyntactic structure aligns across languages with varying typology</li>
-	<li>&nbsp;&nbsp;&nbsp;&#8226; The performance of conventional statistical methods for language modeling or representation learning in learning formal and semantic features that can generalize across languages, scripts and syntactic structures</li>
-	<li>&nbsp;&nbsp;&nbsp;&#8226; The limitations of conventional methods for morphological or syntactic modeling as well as the specifications required for developing more comprehensive and theoretically complete models of language</li>
-	</ul>
 
-
+<h3 style="font-size:20px;"> <strong>Tasks and Evaluation</strong></h3>
 <br/>
+With the advancement of language models accessing and processing tons of information in different formats and languages, it has become of great importance to be able to assess the capabilities to access and provide the right information useful to different audiences. In this shared task, we provide a multi-task evaluation format that assesses reading comprehension capabilities of language models in terms of two subtasks: named entity recognition and question answering.
+<b>Named Entity Recognition (NER)</b> is a classification task that identifies phrases in a text that refer to entities or predefined categories (such as dates, person, organization and location names) and it is an important capability for information access systems that perform entity look-ups for knowledge verification, spell-checking or localization applications. The XTREME-UP dataset contains processed data from <a href="https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00416/107614">MasakhaNER</a> (Adelani et al., 2021) and <a href="https://arxiv.org/pdf/2210.12391.pdf">MasakhaNER 2.0</a> (Adelani et al., 2022) in the following languages: Amharic, Ghomálá, Bambara, Ewe, Hausa, Igbo, (Lu)Ganda, (Dho)Luo, Mossi (Mooré), Nyanja (Chichewa), Nigerian Pidgin, Kinyarwanda, Shona, Swahili, Tswana (Setswana), Twi, Wolof, Xhosa, Yoruba and Zulu.
+The objective of the system is to tag the named entities in a given text as person (PER), organization (ORG), location (LOC), and date (DATE) (Our tag set uses $$ as delimiter).
+</p>
+<h3 style="font-size:20px;"> <strong>Tasks and Evaluation</strong></h3>
+<br/>
+<b>Question answering (QA)</b> is an important capability that enables responding to natural language questions with answers found in text. Here we focus on the information-seeking scenario where questions can be asked without knowing the answer—it is the system’s job to locate a suitable answer passage (if any). The information-seeking question-answer pairs tend to exhibit less lexical and morphosyntactic overlap between the question and answer since they are written separately, which is a more suitable setting to evaluate typologically-diverse languages.
+Here, the system is given a question, title, and a passage and must provide the answer—if any—or otherwise return that the question has “no answer” in the passage.  The XTREME-UP benchmark currently contains QA data only in Indonesian, Bengali, Swahili and Telugu. The competing systems will therefore be required to infer information from different language annotations.
+</p>
+<h3 style="font-size:20px;"> <strong>Tasks and Evaluation</strong></h3>
+<br/>
+We evaluate model performance in the generative task with character error rate (CER) and character n-gram F-score (chrF; Popovic, 2015) rather than their word-level counterparts as they enable more fine-grained evaluation and are better suited to morphologically-rich languages. We obtain a final score by averaging the scores of QA and NER, evaluated with F1 accuracy.
+</p>
+
+						
 <h3 style="font-size:20px;"> <strong>Languages</strong></h3>
 <br/>
 
 <p  style="font-size:17px">
-    The shared task will initially include six languages from different language families and with varying morphological characteristics: English, French, German, Hebrew, Russian and Turkish. We anticipate the extension of the benchmark to include more languages as time and resources become available.
+The training and validation data sets that can be used for building multi-task information retrieval systems are directly accessible on the XTREME-UP repository. 
+
+The test sets for official evaluation will be released one week before the submission date, and will be in the following languages: Igbo, Indonesian, Swiss German, Turkish, Uzbek, Yoruba.
+We also anticipate that there will be one or two surprise languages in the final test sets.
 
 </p>
 
 <br/>
-<h3 style="font-size:20px;"> <strong>Tasks</strong></h3>
-<br/>
-
-<p  style="font-size:17px">
-	The shared task can be studied in terms of three parts. 
-	<br/>
-	<br/>
-	<strong>Task 1: Inflection</strong>
-	<br/>
-	<br/>
-	In this task the input is verbal lemma (the form given as a lexicon entry) and a specific set of inflectional features. The task requires generating the desired output clause manifesting the features.
-</p>
-
-<p  style="font-size:17px">
-</br>
-Examples
-</br>
-</p>
-
-<table>
-<thead>
-  <tr>
-    <th><strong>Languages</strong></th>
-    <th style="width:70%"><strong>Input</strong></th>
-    <th><strong>Output</strong></th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>English</td>
-    <td style="width:70%">give IND;FUT;NOM(1,SG);ACC(3,SG,MASC);DAT(3,SG,FEM)</td>
-    <td>I will give him to her</td>
-  </tr>
-  <tr>
-    <td>German</td>
-    <td style="width:70%">geben IND;FUT;NOM(1,SG);ACC(3,SG,MASC);DAT(3,SG,FEM)</td>
-    <td>Ich werde ihn ihr geben
-	</td>
-  </tr>
-  <tr>
-    <td>Turkish</td>
-    <td style="width:70%">vermek IND;FUT;NOM(1,SG);ACC(3,SG);DAT(3,SG)</td>
-    <td>Onu ona vereceğim</td>
-  </tr>
-  <tr>
-    <td>Hebrew</td>
-    <td style="width:70%">נתן IND;FUT;NOM(1,SG);ACC(3,SG,MASC);DAT(3,SG,FEM)</td>
-    <td>אתן אותו לה</td>
-  </tr>
-</tbody>
-</table>
-
-<p  style="font-size:17px">
-	<br/>
-	<br/>
-	<strong>Task 2: Reinflection</strong>
-	<br/>
-	<br/>
-	In this task the input is an <i>inflected clause</i>, accompanied by its <i>features</i>, and <i>a new set of features</i> representing the desired form. The task is to generate the desired output that will represent the desired features.
-</p>
-
-<p  style="font-size:17px">
-</br>
-Examples
-</br>
-</p>
-
-<table>
-	<thead>
-	  <tr>
-		<th><strong>Languages</strong></th>
-		<th style="width:70%"><strong>Input</strong></th>
-		<th><strong>Output</strong></th>
-	  </tr>
-	</thead>
-	<tbody>
-	  <tr>
-		<td>English</td>
-		<td style="width:70%">I will give him to her IND;FUT;NOM(1,SG);ACC(3,SG,MASC);DAT(3,SG,FEM)<br/>IND;PRS;NOM(1,PL);ACC(2);DAT(3,PL);NEG		</td>
-		<td>We don't give you to them</td>
-	  </tr>
-	  <tr>
-		<td>German</td>
-		<td style="width:70%">Ich werde ihn ihr geben IND;FUT;NOM(1,SG);ACC(3,SG,MASC);DAT(3,SG,FEM)<br/>IND;PRS;NOM(1,PL);ACC(2,SG);DAT(3,PL);NEG
-			</td>
-		<td>Wir geben dich ihnen nicht
-		</td>
-	  </tr>
-	  <tr>
-		<td>Turkish</td>
-		<td style="width:70%">Onu ona vereceğim IND;FUT;NOM(1,SG);ACC(3,SG,MASC);DAT(3,SG,FEM) <br/> IND;PRS;PROG;NOM(1,PL);ACC(2,SG);DAT(3,PL);NEG</td>
-		<td>Seni onlara vermiyoruz</td>
-	  </tr>
-	  <tr>
-		<td>Hebrew</td>
-		<td style="width:70%"> אתן אותו לה IND;FUT;NOM(1,SG);ACC(3,SG,MASC);DAT(3,SG,FEM) <br/> IND;PRS;NOM(1,PL,MASC);ACC(2,SG,MASC);DAT(3,PL,FEM);NEG</td>
-		<td>אנחנו לא נותנים אותך להן</td>
-	  </tr>
-	</tbody>
-	</table>
-	
-	<p  style="font-size:17px">
-		<br/>
-		<br/>
-		<strong>Task 3: Analysis</strong>
-		<br/>
-		<br/>
-		This task is the opposite of task 1, where a system is required to analyze given <i>clauses</i> and generate the <i>lemma</i> and <i>features</i> underlying them.	</p>
-	
-	<p  style="font-size:17px">
-	</br>
-	Examples
-	</br>
-	</p>
-
-	<table>
-		<thead>
-		  <tr>
-			<th><strong>Languages</strong></th>
-			<th style="width: 30%"><strong>Input</strong></th>
-			<th><strong>Output</strong></th>
-		  </tr>
-		</thead>
-		<tbody>
-		  <tr>
-			<td>English</td>
-			<td style="width: 30%">I will give him to her</td>
-			<td>give IND;FUT;NOM(1,SG);ACC(3,SG,MASC);DAT(3,SG,FEM)</td>
-		  </tr>
-		  <tr>
-			<td>German</td>
-			<td style="width: 30%">Ich werde ihn ihr geben</td>
-			<td>geben IND;FUT;NOM(1,SG);ACC(3,SG,MASC);DAT(3,SG,FEM)
-			</td>
-		  </tr>
-		  <tr>
-			<td>Turkish</td>
-			<td style="width: 30%">Onu ona vereceğim</td>
-			<td>vermek IND;FUT;NOM(1,SG);ACC(3,SG);DAT(3,SG)</td>
-		  </tr>
-		  <tr>
-			<td>Hebrew</td>
-			<td style="width: 30%">אתן אותו לה</td>
-			<td>נתן IND;FUT;NOM(1,SG);ACC(3,SG,MASC);DAT(3,SG,FEM)</td>
-		  </tr>
-		</tbody>
-		</table>
-
-		<br/>
+							
 <h3 style="font-size:20px;"> <strong>Participation</strong></h3>
 <br/>
 
 <p  style="font-size:17px">
-	Interested parties are invited to join the mailing list at <a href="mailto:participants-mcmsharedtask-2022@googlegroups.com">participants-mcmsharedtask-2022@googlegroups.com</a> to be involved in the competition. 
+	Interested parties are invited to join the mailing list at <a href="mailto:mrlw2023@gmail.com">mrlw2023@gmail.com</a> to be involved in the competition. 
 
-All participating systems will be evaluated together with our baselines against the same held-out test set, to be released shortly before evaluation. Submitted systems can compete in some or all sub-tasks. <strong><a href="https://github.com/Fenerator/mrl_2022_shared_task_evaluation">Submission system</a> is now open!</strong>
-
-Participating teams will be invited to submit a short paper describing their work to the MRL workshop and to present it in a special session in the workshop. Paper submissions must follow the EMNLP paper format and sent to <strong><a href="https://softconf.com/emnlp2022/mrl-2022">Softconf Conference Link of MRL 2022</a></strong> before the paper submission deadline.
+All participating systems will be evaluated together with our baselines against the same held-out test set, to be released shortly before evaluation. Submitted systems can compete in some or all sub-tasks. 
+Participating teams will be invited to submit a short paper describing their work to the MRL workshop and to present it in a special session in the workshop. Paper submissions must follow the EMNLP paper format and sent to <strong><a href="https://softconf.com/emnlp2023/mrl-2023">Softconf Conference Link of MRL 2023</a></strong> before the paper submission deadline.
 <br/>
 	<br/>
-	Participating teams will be invited to submit a short paper describing their work to the MRL workshop and to present it in a special session in the workshop.
+	Participating teams will be invited to submit a paper describing their work to the MRL workshop and to present it in a special session in the workshop.
 </p>
-
-<h3 style="font-size:20px;"> <strong>Data</strong></h3>
-<br/>
-
-<p  style="font-size:17px">
-	Training and development data for building systems for the above three tasks in six languages can be found on <a href="https://github.com/omagolda/MRL_shared-task_2022">our github repository</a>.
-</p>	
 
 <h3 style="font-size:20px;"> <strong>Important dates</strong></h3>
 <br/>
 
 
 <p  style="font-size:17px">
-	May 16, 2022: Release of training and development data
+	September 1, 2023: Release of testing data 
 	<br/>
-	<strong><s>July 20, 2022</s> August 7, 2022: Release of testing data (including surprise languages)</strong>
+	August 20, 2023: Deadline to release external data and resources used in systems 
 	<br/>
-	<strong>August 14, 2022: Deadline to release external data and resources used in systems</strong>
+	September 10, 2023: Deadline for submission of systems
 	<br/>
-	<strong><s>July 30, 2022</s> August 22, 2022: Deadline for submission of systems</strong>
+	September 20, 2023: Release of rankings and results
 	<br/>
-	August 25, 2022: Release of rankings and results
+	September 30, 2023: Deadline for submitting system description papers
 	<br/>
-	September 15, 2022: Deadline for submitting system description papers
+	October 7, 2023: Paper notifications 
 	<br/>
-	October 10, 2022: Paper notifications
+	October 21, 2023: Camera-ready papers and posters due 
 	<br/>
-	November 9, 2022: Camera-ready papers and posters due
+	December 7, 2023: Workshop 
 	<br/>
-	December 8, 2022: Workshop
-	<br/>
-</p>
-
-<h3 style="font-size:20px;"> <strong>Evaluation</strong></h3>
-<br/>
-
-<p  style="font-size:17px">
-	System outputs will be evaluated using standard evaluation metrics used in morphological analysis and inflection, including the exact match accuracy ratings (precision, recall and F-1) as well as metrics for generated text, such as the edit distance.
-
 </p>
 
 <h3 style="font-size:20px;"> <strong>Ranking</strong></h3>
 <br/>
 
 <p  style="font-size:17px">
-	The systems will be evaluated based on the global ranking on all benchmark languages. Participants can submit systems that are language-specific (monolingual) and their systems will be evaluated as a partial submission to the specific language their system is trained on. We anticipate awarding a prize to the winning team.
+	The systems will be evaluated based on the global ranking on all benchmark languages. Participants can submit systems that are language-specific (monolingual) and their systems will be evaluated as a partial submission to the specific language their system is trained on. 
 
 </p>
 
 <h3 style="font-size:20px;"> <strong>Additional resources</strong></h3>
 <br/>
 <p  style="font-size:17px">
-		The shared task allows participants to use external resources or tools as long as they are openly available and can be, in theory, used by other participants for research purposes. In case participants decide to use external resources and data in their system they should contact the organizers in case the specific resources would be permitted, in such cases specific information on the used resources and how they can be obtained should be shared on the participants mail group at the latest by August 20th, 2022.
+		The shared task allows participants to use external resources or tools as long as they are openly available and can be, in theory, used by other participants for research purposes. In case participants decide to use external resources and data in their system they should contact the organizers in case the specific resources would be permitted, in such cases specific information on the used resources and how they can be obtained should be shared via email by August 20th, 2023.
 	
 </p>
 
@@ -337,33 +181,23 @@ Participating teams will be invited to submit a short paper describing their wor
 <p  style="font-size:17px">
 	Omer Goldman, Bar Ilan University
 	<br/>
-	Reut Tsarfaty, Bar Ilan University
+	David Adelani, UCL and Google Deepmind
 	<br/>
-	Djame Seddah, INRIA Paris
+	Chris Emezue, TU Munich and MILA
 	<br/>
-	Benjamin Muller, INRIA Paris and Sorbonne University
+	Mammad Hajili, Microsoft
 	<br/>
-	Benoît Sagot, INRIA Paris
+	Sebastian Ruder, Google Deepmind
 	<br/>
-	Hila Gonen, University of Washington and Meta AI
+	Genta Indra Winata, Bloomberg
 	<br/>
-	Jamshidbek Mirzakhalov, Salesforce
-	<br/>
-	Kelechi Ogueji, University of Waterloo
-	<br/>
-	Francesco Tinner, University of Zurich
+	Francesco Tinner, University of Amsterdam
 	<br/>
 	Duygu Ataman, New York University
 	<br/>	
-</p> -->
-<!-- 
-<header>
-  <h2 style="font-size:27px">Contact</h2>
-</header>
-<p  style="font-size:17px"> &nbsp;&nbsp;&nbsp; Feel free to join the mailing list at <a href="mailto:participants-mcmsharedtask-2022@googlegroups.com">participants-mcmsharedtask-2022@googlegroups.com</a> or contact <a href="mailto:mrlw2022@gmail.com">mrlw2022@gmail.com</a> if you have any questions about the workshop. </p>
-   -->
+</p> 
 
-<!-- <div align="center"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdKvUOOUQSUpbOCWGR6a3zXUTEhhDqTRIXwhlgPwGPrpNpPcQ/viewform?usp=sf_link" class="button medium">Register!</a></div> -->
+
 </section>
 </div>
 					
