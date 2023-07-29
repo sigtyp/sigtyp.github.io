@@ -95,17 +95,18 @@ In this new shared task we extend the <a href="https://github.com/google-researc
 
 <h3 style="font-size:20px;"> <strong>Tasks and Evaluation</strong></h3>
 <br/>
+<p  style="font-size:17px">
 With the advancement of language models accessing and processing tons of information in different formats and languages, it has become of great importance to be able to assess the capabilities to access and provide the right information useful to different audiences. In this shared task, we provide a multi-task evaluation format that assesses reading comprehension capabilities of language models in terms of two subtasks: named entity recognition and question answering.
 <b>Named Entity Recognition (NER)</b> is a classification task that identifies phrases in a text that refer to entities or predefined categories (such as dates, person, organization and location names) and it is an important capability for information access systems that perform entity look-ups for knowledge verification, spell-checking or localization applications. The XTREME-UP dataset contains processed data from <a href="https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00416/107614">MasakhaNER</a> (Adelani et al., 2021) and <a href="https://arxiv.org/pdf/2210.12391.pdf">MasakhaNER 2.0</a> (Adelani et al., 2022) in the following languages: Amharic, Ghomálá, Bambara, Ewe, Hausa, Igbo, (Lu)Ganda, (Dho)Luo, Mossi (Mooré), Nyanja (Chichewa), Nigerian Pidgin, Kinyarwanda, Shona, Swahili, Tswana (Setswana), Twi, Wolof, Xhosa, Yoruba and Zulu.
 The objective of the system is to tag the named entities in a given text as person (PER), organization (ORG), location (LOC), and date (DATE) (Our tag set uses $$ as delimiter).
 </p>
-<h3 style="font-size:20px;"> <strong>Tasks and Evaluation</strong></h3>
 <br/>
+<p  style="font-size:17px">
 <b>Question answering (QA)</b> is an important capability that enables responding to natural language questions with answers found in text. Here we focus on the information-seeking scenario where questions can be asked without knowing the answer—it is the system’s job to locate a suitable answer passage (if any). The information-seeking question-answer pairs tend to exhibit less lexical and morphosyntactic overlap between the question and answer since they are written separately, which is a more suitable setting to evaluate typologically-diverse languages.
 Here, the system is given a question, title, and a passage and must provide the answer—if any—or otherwise return that the question has “no answer” in the passage.  The XTREME-UP benchmark currently contains QA data only in Indonesian, Bengali, Swahili and Telugu. The competing systems will therefore be required to infer information from different language annotations.
 </p>
-<h3 style="font-size:20px;"> <strong>Tasks and Evaluation</strong></h3>
 <br/>
+<p  style="font-size:17px">
 We evaluate model performance in the generative task with character error rate (CER) and character n-gram F-score (chrF; Popovic, 2015) rather than their word-level counterparts as they enable more fine-grained evaluation and are better suited to morphologically-rich languages. We obtain a final score by averaging the scores of QA and NER, evaluated with F1 accuracy.
 </p>
 
