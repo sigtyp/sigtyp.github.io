@@ -110,11 +110,11 @@ The objective of the system is to tag the named entities in a given text, either
 <br/>
 <p  style="font-size:17px">
 <b>Question answering (QA)</b> is an important capability that enables responding to natural language questions with answers found in text. Here we focus on the information-seeking scenario where questions can be asked without knowing the answer—it is the system’s job to locate a suitable answer passage (if any). The information-seeking question-answer pairs tend to exhibit less lexical and morphosyntactic overlap between the question and answer since they are written separately, which is a more suitable setting to evaluate typologically-diverse languages.
-Here, the system is given a question, title, and a passage and must provide the answer—if any—or otherwise return that the question has “no answer” in the passage.  The XTREME-UP benchmark currently contains QA data only in Indonesian, Bengali, Swahili and Telugu. The competing systems will therefore be required to infer information from different language annotations.
+Here, the system is given a question, title, and a passage and the system must pick the right answer among a list of 4 different potential options.  
 </p>
 <br/>
 <p  style="font-size:17px">
-<b>Evaluation</b> in the generative task will use character error rate (CER) and character n-gram F-score rather than their word-level counterparts as they enable more fine-grained evaluation and are better suited to morphologically-rich languages. We obtain a final score by averaging the scores of QA and NER, evaluated with F1 accuracy.
+<b>Evaluation</b> in the generative task is measured in terms of the accuracy in the multi-choice answering task, and the F1 accuracy in the NER task. We obtain a final score by averaging the scores of QA and NER.
 </p>
 
 						
@@ -179,14 +179,10 @@ Participating teams will be invited to submit a short paper describing their wor
 	David Adelani, UCL and Google Deepmind
 	<br/>
 	Duygu Ataman, New York University
-	<br/>	
-	Chris Emezue, TU Munich and Mila
-	<br/>
-	Omer Goldman, Bar Ilan University
 	<br/>
 	Mammad Hajili, Microsoft
-	<br/>
-	Sebastian Ruder, Google Deepmind
+	<br/>	
+	Inder Khatri, New York University
 	<br/>
 	Francesco Tinner, University of Amsterdam
 	<br/>
