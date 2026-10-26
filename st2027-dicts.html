@@ -126,10 +126,13 @@ Following the established evaluation pipeline (<a href="https://arxiv.org/pdf/26
 							
 <h3  style="font-size:24px">Combined Task:</h3>
 <p  style="font-size:17px">This stage focuses on the overall performance of the system on the task of digitizing a dictionary.<br/>
-
+<br/>
+	
 <strong>Input:</strong> a) pdf (scanned or native) of the dictionary pages to be digitized, b)  pdf (scan or native) of the introductory pages of the dictionary<br/>
 <strong>Output:</strong><br/> txt-file, with MDF layout
 </p>
+							
+<br/><br/>	
 							
 <p  style="font-size:17px">On top of that,  all systems will be evaluated in terms of their <em>estimated cost</em> and <em>token usage</em> (for API- and subscription-based approaches), as well as <em>reproducibility</em> and <em>accessibility</em> of the code.
 </p>
@@ -141,15 +144,23 @@ Following the established evaluation pipeline (<a href="https://arxiv.org/pdf/26
 <header><h2 style="font-size:27px">Datasets and the Task Setup</h2></header>
 <p  style="font-size:17px">
 The task is organized in three phases: (1) <em>Data Collection</em>; (2) <em>System Evaluation</em>; (3) <em>Full Digitization</em>. 
-	<br/>
-	At the start of the data collection phase, we invite EOI from linguists and communities to register their dictionaries for digitization. They will also be asked to provide a gold standard transcription for a 3-page sample of their dictionaries (the organizers can provide them with silver-standard transcripts to ease the process). These annotated samples will be used for evaluation of the systems. During the data collection phase, shared task participants will have access to a sample of 26 dictionaries with gold-standard annotations collected ealier as a part of <a href="https://huggingface.co/datasets/Davidsamuel101/MUDIDI/tree/main/dictionaries">the MUDIDI dataset</a>. They can use these dictionaries to fine-tune their systems.
-<br/>
-Once the data collection phase finishes, systems will be evaluated on the new dictionary samples collected from data contributors. For each dictionary registered for the shared task, the organsers will then list each system's performance and provide its predictions as well as cost estimates. The data contributors will then vote for the best system and choose the one to use for the full dictionary digitization.
-<br/>
-During the full digitization phase, dictionaries which are in the public domain will be fully digitized. During this phase systems will additionally be evaluated on cost, time, and issues arising in a full digitization task (e.g. hallucinations).
-<br/>
-In addition to this, the shared task allows participants to use external resources as long as they are openly available and can be, in theory, used by other participants for research purposes. In case participants decide to use external resources and data in their system they should use proper citation and provide the details of the dataset in the system description.
+</p>
 
+<p  style="font-size:17px">
+	<strong>Data Collection:</strong> At the start of the data collection phase, we invite EOI from linguists and communities to register their dictionaries for digitization. They will also be asked to provide a gold standard transcription for a 3-page sample of their dictionaries (the organizers can provide them with silver-standard transcripts to ease the process). These annotated samples will be used for evaluation of the systems. During the data collection phase, shared task participants will have access to a sample of 26 dictionaries with gold-standard annotations collected ealier as a part of <a href="https://huggingface.co/datasets/Davidsamuel101/MUDIDI/tree/main/dictionaries">the MUDIDI dataset</a>. They can use these dictionaries to fine-tune their systems.
+</p>
+	
+<p  style="font-size:17px">
+<strong>System Evaluation:</strong> Once the data collection phase finishes, systems will be evaluated on the new dictionary samples collected from data contributors. For each dictionary registered for the shared task, the organsers will then list each system's performance and provide its predictions as well as cost estimates. The data contributors will then vote for the best system and choose the one to use for the full dictionary digitization.
+</p>
+	
+<p  style="font-size:17px">
+<strong>Full Digitization:</strong> During the full digitization phase, dictionaries which are in the public domain will be fully digitized. During this phase systems will additionally be evaluated on cost, time, and issues arising in a full digitization task (e.g. hallucinations).
+</p>
+
+
+<p  style="font-size:17px">
+In addition to this, the shared task allows participants to use external resources as long as they are openly available and can be, in theory, used by other participants for research purposes. In case participants decide to use external resources and data in their system they should use proper citation and provide the details of the dataset in the system description.
 </p>
 
 
