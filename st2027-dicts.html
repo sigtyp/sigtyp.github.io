@@ -86,12 +86,12 @@
 <p  style="font-size:17px">
   In 2027, <font color="red">S</font>IG<font color="red">T</font>YP is hosting a <strong>Shared Task on Collaborative Dictionary Digitization.</strong> 
   
-According to UNESCO, around 3,000 languages could disappear before the end of the century, at a rate of one every two weeks. Dictionaries are particularly important resources for language documentation, translation, education and community-led language revitalization (<a href="https://www.lddjournal.org/article/id/1047/">Mosel, 2004</a>; <a href="https://linguistics.berkeley.edu/~garrett/garrett-dictionaries.pdf">Garrett,2018</a>).  Many dictionaries are only available as hard copies in libraries or archives and are spread all over the world, often far away from the communities who initially contributed to their collection. Despite that the situation has somewhat improved when libraries and other organizations started sharing their scanned versions online. Still, scans cannot be searched, updated,or adjusted. Neither they can be used to create a mobile app for language learning or revitalization. Digitizing the dictionaries and presenting them in a structured format opens tremendous opportunities for both commuinties and researchers, and can be one of the major steps towards language revitalization.
+According to UNESCO, around 3,000 languages could disappear before the end of the century, at a rate of one every two weeks. Dictionaries are particularly important resources for language documentation, translation, education and community-led language revitalization (<a href="https://www.lddjournal.org/article/id/1047/">Mosel, 2004</a>; <a href="https://linguistics.berkeley.edu/~garrett/garrett-dictionaries.pdf">Garrett,2018</a>).  Many dictionaries are only available as hard copies in libraries or archives and are spread all over the world, often far away from the communities who initially contributed to their collection. A welcome development in recent years is that libraries and other organizations have begun sharing their scanned versions online. Still, scans cannot be searched, updated,or adjusted. Neither they can be used to create a mobile app for language learning or revitalization. Digitizing dictionaries and presenting them in a structured format opens tremendous opportunities for both communities and researchers, and in some cases can be a substantial step towards language revitalization.
 </p>
 <hr style="border-top: dotted 2px;"/> <br/> 
 <header><h2 style="font-size:27px">Aims and Goals</h2></header> 
 <p  style="font-size:18px">
-&nbsp;&nbsp;&nbsp;&nbsp;<i><font color="red"> AIM 1:</font></i> Create a <font color="red">collaborative network</font> of researchers from linguistics, computer science as well as communities to work together on dictionary digitization; <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<i><font color="red"> AIM 1:</font></i> Create a <font color="red">collaborative network</font> of researchers including linguists, computer scientists, and members of speech communities to work together on dictionary digitization; <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<i><font color="green"> AIM 2:</font></i> Perform <font color="green">evaluation of OCR and dictionary parsing systems</font> in terms of their accuracy, usability, and the total cost; <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<i><font color="blue"> AIM 3:</font></i> Produce <font color="blue">high-quality digitized dictionaries</font> that require minimum post-editing effort to be turned into gold standard ones.<br/>
 
@@ -99,7 +99,7 @@ According to UNESCO, around 3,000 languages could disappear before the end of th
  <hr style="border-top: dotted 2px;"/> <br/>
 <header><h2 style="font-size:27px">Subtasks</h2></header>
 <p  style="font-size:17px">
-Following the established evaluation pipeline (<a href="https://arxiv.org/pdf/2606.09435">Setiawan et al, 2026; MUDIDI</a>), we will focus on two major subtasks:</p>
+Following the established pipeline (<a href="https://arxiv.org/pdf/2606.09435">Setiawan et al, 2026; MUDIDI</a>), we will focus on two major subtasks:</p>
 
 <h3  style="font-size:24px">Subtask 1: Faithful transcription (OCR)</h3>
 <p  style="font-size:17px">This stage focuses on vanilla OCR: transforming an input PDF file into a plain text one, preserving the layout. <br/>
@@ -123,7 +123,7 @@ Following the established evaluation pipeline (<a href="https://arxiv.org/pdf/26
 	
 <strong>Evaluation metrics:</strong> Entry F1 (Entry Detection Accuracy), Field Assignment F1 (Assigning tags/labels), ReadOrderEdit <br/>
 
-<strong>Baselines:</strong> a Roberta-based sequence labelling model
+<strong>Baselines:</strong> a RoBERTa-based sequence labelling model
 </p>
 
 							
@@ -136,36 +136,36 @@ Following the established evaluation pipeline (<a href="https://arxiv.org/pdf/26
 				
 <center><img src="images/dicts-st.png" width="700px" /> </center>
 							
-<p  style="font-size:17px">On top of that,  all systems will be evaluated in terms of their <em>estimated cost</em> and <em>token usage</em> (for API- and subscription-based approaches), as well as <em>reproducibility</em> and <em>accessibility</em> of the code.
+<p  style="font-size:17px">All systems will also be evaluated in terms of their <em>estimated cost</em> and <em>token usage</em> (for API- and subscription-based approaches), as well as <em>reproducibility</em> and <em>ease of use</em> of the code.
 </p>
 							
 
 
-<p  style="font-size:20px"><font color="green">You may submit a system to any of them or both!</font></p>
+<p  style="font-size:20px"><font color="green">You may submit a system to subtask 1 alone, subtask 2 alone, or both subtasks!</font></p>
 
 <hr style="border-top: dotted 2px;"/> <br/> 
 
-<header><h2 style="font-size:27px">Datasets and the Task Setup</h2></header>
+<header><h2 style="font-size:27px">Datasets and Task Setup</h2></header>
 <p  style="font-size:17px">
 The task is organized in three phases: (1) <em>Data Collection and System Development</em>; (2) <em>System Evaluation</em>; (3) <em>Full Digitization</em>. </p>
 
 <p style="border: 2px dotted green; padding: 10px;font-size:17px">
-&nbsp;&nbsp;&nbsp;&nbsp; <font color="green">:: <b><u>An importnat note about Data collection, System Development and Evaluation</u></b> ::</font> <br/> 
+&nbsp;&nbsp;&nbsp;&nbsp; <font color="green">:: <b><u>An important note about Data collection, System Development and Evaluation</u></b> ::</font> <br/> 
 
   For each dictionary we will provide <b>a three-page sample and its introductory (usage) section</b>, if it exists. Systems will be evaluated and ranked based on their performance on these three-page samples.<br/>
 
 The shared task also features <b>two roles: (1) Data Contributor; (2) System Developer (shared task participant)</b>. 
 </p>
 <p  style="font-size:17px">
-Data contributors register their dictionaries for digitization, annotate the three page samples, and then vote for the best system for their dictionary. System developers design models for both or either of the tasks, provide access to the models and assist in running the models if they are selected by data contributors. Participants can also take both roles. 
+Data contributors register their dictionaries for digitization, annotate the three page samples, and then vote for the best system for their dictionary. System developers design models for both or either of the tasks, provide access to the models and assist in running the models if they are selected by data contributors. Participants are welcome to register as both data contributors and system developers. 
 </p>
 
 <p  style="font-size:17px">
-	<strong>Data Collection and System Development:</strong> At the start of the data collection phase, we invite EOI from linguists and communities to register their dictionaries for digitization. They will also be asked to provide a gold standard transcription for a 3-page sample of their dictionaries (the organizers can provide them with silver-standard transcripts to ease the process). These annotated samples will be used for evaluation of the systems. During the data collection phase, system developers will have access to a sample of 26 dictionaries with gold-standard annotations collected ealier as a part of <a href="https://huggingface.co/datasets/Davidsamuel101/MUDIDI/tree/main/dictionaries">the MUDIDI dataset</a>. They can use these dictionaries to fine-tune their systems.
+	<strong>Data Collection and System Development:</strong> At the start of the data collection phase, we invite expressions of interests from linguists and communities who would like to register  their dictionaries for digitization. They will also be asked to provide a gold standard transcription of a 3-page sample of their dictionaries (the organizers can provide them with silver-standard transcripts to ease the process). These annotated samples will be used for evaluation of the systems. During the data collection phase, system developers will have access to a sample of 26 dictionaries with gold-standard annotations collected ealier as a part of <a href="https://huggingface.co/datasets/Davidsamuel101/MUDIDI/tree/main/dictionaries">the MUDIDI dataset</a>. They can use these dictionaries to fine-tune their systems.
 </p>
 	
 <p  style="font-size:17px">
-<strong>System Evaluation:</strong> Once the data collection phase finishes, systems will be evaluated on the new dictionary samples collected from data contributors. System developers submit their system predictions for each dictionary along with the system (e.g., via git repo). For each dictionary registered for the shared task, the organisers will then list each system's performance and provide its predictions as well as cost estimates. They will also assess each system in terms of its usability. The data contributors will then vote for the best system for their dictionaries and choose the one to use for the full dictionary digitization.
+<strong>System Evaluation:</strong> Once the data collection phase finishes, systems will be evaluated on the new dictionary samples collected from data contributors. System developers submit their system predictions for each dictionary along with the system (e.g., via a GitHub repository). For each dictionary registered for the shared task, the organisers will then list each system's performance and provide its predictions as well as cost estimates. They will also assess each system in terms of its usability. The data contributors will then vote for the best system for their dictionaries and choose the one to use for the full dictionary digitization.
 </p>
 	
 <p  style="font-size:17px">
@@ -174,12 +174,12 @@ Data contributors register their dictionaries for digitization, annotate the thr
 
 
 <p  style="font-size:17px">
-In addition to this, the shared task allows participants to use external resources as long as they are openly available and can be, in theory, used by other participants for research purposes. In case participants decide to use external resources and data in their system they should use proper citation and provide the details of the dataset in the system description.
+In addition to this, the shared task allows participants to use external resources as long as they are openly available and can be, in theory, used by other participants for research purposes. In case participants decide to use external resources and data in their system they should cite these resources and provide details of the datasets used in the system description.
 </p>
 
 
 <p  style="font-size:17px">
-  Participants will be invited to describe their system in a paper for the SIGTYP workshop proceedings. The task organizers will write an overview paper that describes the task and summarizes the different approaches taken, and analyzes their results. Data contributors and shared task participants are welcome to co-author the overview paper. Data contributors are also invited to write a paper on their experience in digitization of the full dictionaries.
+  Participants will be invited to describe their system in a paper for the SIGTYP workshop proceedings. The task organizers will write an overview paper that describes the task and summarizes the different approaches taken, and analyzes their results. Data contributors and shared task participants are welcome to co-author the overview paper. Data contributors are also invited to write a paper on their experience in digitizing full dictionaries.
 </p>
 
 
@@ -197,7 +197,7 @@ In addition to this, the shared task allows participants to use external resourc
 
 
 <p style="font-size:17px">
-&nbsp;&nbsp;&#8611;&nbsp;&nbsp;<a href="https://github.com/sigtyp/ST2026-dicts">Shared Task GIT Page (provides the data, baseline models, and evaluation scripts)</a>&nbsp;&nbsp;
+&nbsp;&nbsp;&#8611;&nbsp;&nbsp;<a href="https://github.com/sigtyp/ST2026-dicts">Shared Task GitHub repository (provides the data, baseline models, and evaluation scripts)</a>&nbsp;&nbsp;
 </p>
 
 
