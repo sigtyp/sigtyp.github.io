@@ -81,31 +81,64 @@
 					<div class="9u skel-cell-important">
 						<section>
 				<header>
-				<h2> SIGTYP  2027 Shared Task: Coming soon... </h2> </header>
+		<h2 style="display: flex; align-items: center; gap: 12px;
+		font-size: 38px; line-height: 1.3;">
+  <svg xmlns="http://www.w3.org/2000/svg"
+       width="54" height="36" viewBox="0 0 56 36"
+       role="img" aria-label="Word segmentation and root identification"
+       style="flex-shrink: 0;">
+
+    <!-- Word divided into three morphs -->
+    <rect x="1" y="7" width="14" height="21" rx="4"
+          fill="#e2e8f0"/>
+    <rect x="20" y="7" width="16" height="21" rx="4"
+          fill="#2563eb"/>
+    <rect x="41" y="7" width="14" height="21" rx="4"
+          fill="#e2e8f0"/>
+
+    <!-- Segmentation boundaries -->
+    <path d="M17.5 3v29 M38.5 3v29"
+          stroke="#64748b" stroke-width="1.5"
+          stroke-dasharray="2 3"/>
+
+    <!-- Highlight identifying the root -->
+    <path d="m24 17 3 3 5-6"
+          fill="none" stroke="white" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+				Morph Segmentation and Root Identification </h2> </header>
 <br/>
 
-<!--p  style="font-size:17px">
-  In 2023, <font color="red">S</font>IG<font color="red">T</font>YP is hosting a <strong>Shared Task on Cognate and Derivative Detection for Low-Resourced Languages.</strong> Cognates are etymologically related word pairs across languages which may or may not have similar spelling, pronunciation and meaning. Cognates can be traced back to a single ancestral word form in a common earlier language stage. On the other hand, derivatives are words which have been derived directly from another word form or root, including both words inherited from an earlier stage of the same language and words borrowed from distinct languages. Cognates have been studied in various fields of linguistics with different purposes. In historical linguistics, cognates are useful in the reconstruction of proto-languages and can aid in establishing the relationship between languages; in lexicography, cognates are helpful in the development of multilingual dictionaries. Moreover, in recent years, NLP researchers have shown interest in using cognates to enhance the performance of multilingual tasks such as machine translation, lexical induction, word embeddings and many more.
+<p  style="font-size:17px">
+In 2027, <font color="red">S</font>IG<font color="red">T</font>YP is hosting a <strong>Shared Task on Morph Segmentation and Root Identification Across Typologically Diverse Languages.
+.</strong> Morphological segmentation, the process of decomposing words into minimal meaningful units, is a long-standing problem in computational linguistics. At the abstract level, these units are known as morphemes; in surface morphological segmentation, the focus is on their overt realizations, or morphs, in individual word forms. Morphological segmentation underpins applications ranging from lexicography and language documentation to subword tokenisation for language models. Yet most existing resources and benchmarks cover only a small set of well-resourced languages, follow incompatible annotation conventions, and treat words in isolation from the sentences in which they occur.
+
+</p>
+
+<!--hr style="border-top: dotted 2px;"/--> <br/> 
+<header><h2 style="font-size:27px">Overview of the Shared Task</h2></header> 
+<p  style="font-size:18px">
+<!--p  style="font-size:17px"-->
+This shared task addresses surface morphological segmentation across typologically diverse languages. Given a word form within a sentence context, participating systems must:
+
+<br/> <strong>a. Segment the word form into surface morphs</strong>, i.e., minimal meaningful units that concatenate to reconstruct the original word form; 
+<br/> <strong>b. Identify the root </strong> among the resulting morphs.
+</p>
+
+<header><h2 style="font-size:27px">DataSets and Task Setup </h2></header> 
+<p  style="font-size:17px">
+ This shared task builds partially on the SIGMORPHON 2022 Shared Task on Morpheme Segmentation and extends it in the following ways:
+ <br/>
+<strong>1. Broader language diversity.</strong> The task covers 40 typologically, genealogically, and geographically diverse languages.
 <br/>
-As there has been little work on automatic cognate identification, it is still a challenging task, especially for less-resourced languages. Supervised identification of cognates and derivatives is expensive as we need more linguistic information and annotation; at the same time, finding linguists and annotators for less-resourced languages is impractical. Thus we propose a shared task which aims to provide a new benchmark for differentiating between cognates and derivatives and introduce new unsupervised approaches for cognate and derivative detection in less-resourced languages. 
+<strong>2. Harmonised evaluation data.</strong> Newly annotated development and test data follow a common sampling method and annotation guidelines, enabling meaningful comparisons across languages.
+<br/>
+<strong>3. Heterogeneous training data.</strong> Training data come from already existing resources and vary considerably in size, quality, lexical material selection, and annotation schema, reflecting the present-day reality of lexicographic resources.
+<br/>
+<strong>4. Integration with Universal Dependencies (UD).</strong> Word forms to be segmented are provided with sentence contexts drawn from UD treebanks as well as with  morphological categories following the Universal Features schema.
+<br/>
+<strong>5. Written and spoken data combined.</strong> For most languages, the shared task uses written word forms. For a few languages, however, phonetic transcriptions are used instead, either because no standardized orthography is available or because the existing writing system is not well suited to morphological segmentation.
 
-</p>
-
-<p  style="font-size:17px">
-The tasks are multiclass classification tasks which require that the relationship between pairs of words be identified as either a cognate relationship, a derivative relationship, or no relationship.
-<br/>a. Supervised: Cognate and Derivative Detection
-<br/>b. Unsupervised: Cognate and Derivative Detection
-</p>
-
-<p  style="font-size:17px">
-We will provide 232,482 annotated word pairs in 34 languages, including both high-resourced and less-resourced languages. Each word pair is annotated with a language for each word, and with one of the three categories based on the relationship between the pair; cognate, derivative or none. This data was collected and annotated using wiktionary. 
-In addition to this, the shared task allows participants to use external resources as long as they are openly available and can be, in theory, used by other participants for research purposes. In case participants decide to use external resources and data in their system they should use proper citation and provide the details of the dataset in the system description.
-
-</p>
-
-
-<p  style="font-size:17px">
-  Participants will be invited to describe their system in a paper for the SIGTYP workshop proceedings. The task organizers will write an overview paper that describes the task and summarizes the different approaches taken, and analyzes their results.
 </p>
 
 <header><h2 style="font-size:27px">Important Links</h2></header>
@@ -115,18 +148,19 @@ In addition to this, the shared task allows participants to use external resourc
 </p>
 
 <p style="font-size:17px">
-&nbsp;&nbsp;&#8611;&nbsp;&nbsp;<a href="https://docs.google.com/forms/d/e/1FAIpQLSd8cPggOcbDvDnbzkyNUJgBw-c1EjOMmiuq7VkCx1zUfSuGOA/viewform?usp=sf_link">Register for the Task</a>!&nbsp;&nbsp;
+&nbsp;&nbsp;&#8611;&nbsp;&nbsp;<a href="https://docs.google.com/forms/d/e/1FAIpQLSdHc1G7ttdoITBjntyM13b2I7ASr9BRnavjIBvcLmdErFYSRw/viewform?usp=dialog">Register for the Task</a>!&nbsp;&nbsp;
 </p>
 
 
 
 <header><h2 style="font-size:27px">Important Dates</h2></header>
 <p style="font-size:17px">
-  &nbsp;&nbsp;Training data Release:&nbsp;&#8611;&nbsp;	9 January 2023<br/>
-  &nbsp;&nbsp;Test data Release:&nbsp;&#8611;&nbsp;	<s>24 February 2023</s> 27 February 2023<br/>
-  &nbsp;&nbsp;Submissions Due:&nbsp;&#8611;&nbsp;	<s>10 March 2023</s> 15 March 2023<br/>
-  &nbsp;&nbsp;System descriptions are Due:&nbsp;&#8611;&nbsp;      20 March 2023<br/>
-  &nbsp;&nbsp;Camera-ready Due:&nbsp;&#8611;&nbsp;	27 March 2023<br/>
+  &nbsp;&nbsp;Training data Release:&nbsp;&#8611;&nbsp;	15 January 2027<br/>
+  &nbsp;&nbsp;Test data Release:&nbsp;&#8611;&nbsp;	15 February 2027<br/>
+  &nbsp;&nbsp;Submissions Due:&nbsp;&#8611;&nbsp;	 1 March 2027<br/>
+  &nbsp;&nbsp;Results Notification :&nbsp;&#8611;&nbsp;	 15 March 2027<br/>
+  &nbsp;&nbsp;System descriptions are Due:&nbsp;&#8611;&nbsp; 22 March 2027<br/>
+  &nbsp;&nbsp;Camera-ready Due:&nbsp;&#8611;&nbsp;	29 March 2027<br/>
 </p>
 
 
@@ -137,17 +171,20 @@ In addition to this, the shared task allows participants to use external resourc
   
 </header>
 <p  style="font-size:17px">
-<strong>Priya Rani</strong>, PhD Student, SFI  Centre for Research and Training in AI, Data Science Institute, University of Galway <br/>
-<strong>Koustava Goswami</strong>, Adobe Research, Bangalore, India; Former PhD Student, Insight SFI Research Centre for Data Analytics, Data Science Institute, University of Galway <br/>
-<strong>Adrian Doyle</strong>,  Research associate, Insight SFI Research Centre for Data Analytic, Data Science Institute, University of Galway<br/>
-<strong>Bernardo Stearns</strong>, Research associate, Insight SFI Research Centre for Data Analytic, Data Science Institute, University of Galway<br/>
-<strong>Theodorus Fransen</strong>, Postdoctoral Researcher, Insight SFI Research Centre for Data Analytics, Data Science Institute, University of Galway<br/>
-<strong>John P. McCrae</strong>, Assistant Professor, Insight SFI Research Centre for Data Analytics, Data Science Institute, University of Galway<br/>
+<strong>Magda Ševčíková </strong>, Charles University<br/>
+<strong>Zdeněk Žabokrtský </strong>, Charles University<br/>
+<strong>Priya Rani</strong>, Charles University<br/>
+<strong>Andrew Dryer</strong>, Charles University<br/>
+<strong>Hana Hledíková</strong>, Charles University<br/>
+<strong>Vojtěch John</strong>, Charles University<br/>
+<strong>Anja Nedoluzhko</strong>, Charles University<br/>
+<strong>Aleš Papáček,</strong>, Charles University<br/>
+<strong>Enora Rice</strong>, University of Colorado<br/>
 </p-->
 <header>
   <h2 style="font-size:27px">Contact</h2>
 </header>
-<p  style="font-size:17px"> &nbsp;&nbsp;&nbsp; Please contact <a href="mailto:priya.rani@insight-centre.org"> priya.rani@insight-centre.org </a> if you have any questions </p>
+<p  style="font-size:17px"> &nbsp;&nbsp;&nbsp; Please contact <a href="mailto:rani@ufal.mff.cuni.cz"> Priya Rani</a> if you have any questions </p>
   
 
 <div align="center"><a href="https://docs.google.com/forms/TBA" class="button medium">Register!</a></div>
